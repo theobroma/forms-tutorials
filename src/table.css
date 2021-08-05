@@ -1,0 +1,36 @@
+.w3-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+}
+
+.w3-table tr:hover {
+  background-color: #ddd !important;
+}
+
+.w3-striped tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.w3-table td,
+.w3-table th {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+
+.w3-table th:first-child,
+.w3-table td:first-child {
+  padding-left: 16px;
+}
+
+.w3-table th,
+.w3-table tfoot td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
