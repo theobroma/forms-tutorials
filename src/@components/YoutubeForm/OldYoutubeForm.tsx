@@ -41,8 +41,10 @@ const YoutubeForm: React.FC = () => {
           <input
             type="text"
             id="name"
-            // name="name"
-            {...formik.getFieldProps('name')}
+            name="name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
           />
           {formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
@@ -53,8 +55,10 @@ const YoutubeForm: React.FC = () => {
           <input
             type="email"
             id="email"
-            // name="email"
-            {...formik.getFieldProps('email')}
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
           />
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
@@ -65,8 +69,10 @@ const YoutubeForm: React.FC = () => {
           <input
             type="text"
             id="channel"
-            // name="channel"
-            {...formik.getFieldProps('channel')}
+            name="channel"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.channel}
           />
           {formik.touched.channel && formik.errors.channel ? (
             <div className="error">{formik.errors.channel}</div>
