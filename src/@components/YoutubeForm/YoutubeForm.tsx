@@ -7,18 +7,44 @@ interface IFormFields {
   channel: string;
 }
 
-const YoutubeForm: React.FC = () => {
-  const initialValues: IFormFields = {
-    name: 'Vishwas',
-    email: '',
-    channel: '',
-  };
+const initialValues: IFormFields = {
+  name: 'Vishwas',
+  email: '',
+  channel: '',
+};
 
+const onSubmit = (values: IFormFields) => {
+  console.log('submit:', values);
+};
+
+const validate = (values: IFormFields) => {
+  // values.name values.email values.channel
+  const errors = {} as any;
+  // errors.name errors.email and errors.channel
+  // errors.name = 'This field is required'
+
+  if (!values.name) {
+    errors.name = 'Required';
+  }
+
+  if (!values.email) {
+    errors.name = 'Required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email format';
+  }
+
+  if (!values.channel) {
+    errors.name = 'Required';
+  }
+
+  return errors;
+};
+
+const YoutubeForm: React.FC = () => {
   const formik = useFormik({
     initialValues,
-    onSubmit: (values) => {
-      console.log('submit:', values);
-    },
+    onSubmit,
+    validate,
   });
 
   return (
