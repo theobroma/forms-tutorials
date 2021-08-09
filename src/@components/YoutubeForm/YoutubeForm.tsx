@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, ErrorMessage, Field } from 'formik';
 import * as Yup from 'yup';
+import { TextError } from './TextError';
 
 interface IFormFields {
   name: string;
@@ -39,13 +40,15 @@ const YoutubeForm: React.FC = () => {
         <div className="form-control">
           <label htmlFor="name">Name</label>
           <Field type="text" id="name" name="name" />
-          <ErrorMessage name="name" component="div" className="field-error" />
+          <ErrorMessage name="name" component={TextError} />
         </div>
 
         <div className="form-control">
           <label htmlFor="email">Email</label>
           <Field type="email" id="email" name="email" />
-          <ErrorMessage name="email" component="div" className="field-error" />
+          <ErrorMessage name="email">
+            {(error) => <div className="field-error">{error}</div>}
+          </ErrorMessage>
         </div>
 
         <div className="form-control">
