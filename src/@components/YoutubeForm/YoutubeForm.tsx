@@ -9,6 +9,10 @@ interface IFormFields {
   channel: string;
   comments: string;
   address: string;
+  social: {
+    facebook: string;
+    twitter: string;
+  };
 }
 
 const initialValues: IFormFields = {
@@ -17,6 +21,10 @@ const initialValues: IFormFields = {
   channel: '',
   comments: '',
   address: '',
+  social: {
+    facebook: '',
+    twitter: '',
+  },
 };
 
 const onSubmit = (values: IFormFields) => {
@@ -84,6 +92,17 @@ const YoutubeForm: React.FC = () => {
             }}
           </Field>
         </div>
+        {/* Nested Objects */}
+        <div className="form-control">
+          <label htmlFor="facebook">Facebook profile</label>
+          <Field type="text" id="facebook" name="social.facebook" />
+        </div>
+
+        <div className="form-control">
+          <label htmlFor="twitter">Twitter profile</label>
+          <Field type="text" id="twitter" name="social.twitter" />
+        </div>
+
         <button type="submit">Submit</button>
       </Form>
     </Formik>
