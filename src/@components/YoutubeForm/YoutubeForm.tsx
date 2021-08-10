@@ -47,7 +47,16 @@ const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email format').required('Required'),
   channel: Yup.string().required('Required'),
+  comments: Yup.string().required('Required'),
 });
+
+const validateComments = (value: string) => {
+  let error;
+  if (!value) {
+    error = 'Required';
+  }
+  return error;
+};
 
 const YoutubeForm: React.FC = () => {
   return (
@@ -90,7 +99,13 @@ const YoutubeForm: React.FC = () => {
 
         <div className="form-control">
           <label htmlFor="comments">Comments</label>
-          <Field as="textarea" id="comments" name="comments" />
+          <Field
+            as="textarea"
+            id="comments"
+            name="comments"
+            validate={validateComments}
+          />
+          <ErrorMessage name="comments" component={TextError} />
         </div>
 
         <div className="form-control">
