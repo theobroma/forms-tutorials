@@ -61,6 +61,7 @@ const onSubmit = (values: IFormFields, submitProps: any) => {
   console.log('Form data', values);
   console.log('submitProps', submitProps);
   submitProps.setSubmitting(false);
+  submitProps.resetForm();
 };
 
 const validationSchema = Yup.object({
@@ -237,6 +238,7 @@ const YoutubeForm: React.FC = () => {
             <button
               type="submit"
               disabled={!formik.isValid || formik.isSubmitting}
+              onClick={() => setFormValues(null)}
             >
               Submit
             </button>
