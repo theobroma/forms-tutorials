@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Formik,
   Form,
@@ -39,6 +39,20 @@ const initialValues: IFormFields = {
   phNumbers: [''],
 };
 
+const savedValues: IFormFields = {
+  name: 'Vishwas',
+  email: 'v@example.com',
+  channel: 'codevolution',
+  comments: 'Welcome to Formik',
+  address: '221B Baker Street',
+  social: {
+    facebook: '',
+    twitter: '',
+  },
+  phoneNumbers: ['', ''],
+  phNumbers: [''],
+};
+
 // const onSubmit = (values: IFormFields) => {
 //   console.log('submit:', values);
 // };
@@ -65,11 +79,13 @@ const validateComments = (value: string) => {
 };
 
 const YoutubeForm: React.FC = () => {
+  const [formValues, setFormValues] = useState<IFormFields | null>(null);
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={formValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
       // validateOnChange={false}
       // validateOnBlur={false}
       // validateOnMount
@@ -185,7 +201,7 @@ const YoutubeForm: React.FC = () => {
               </FieldArray>
             </div>
             {/* Buttons */}
-            <button
+            {/* <button
               type="button"
               onClick={() => formik.validateField('comments')}
             >
@@ -212,6 +228,10 @@ const YoutubeForm: React.FC = () => {
               }
             >
               Visit all
+            </button> */}
+
+            <button type="button" onClick={() => setFormValues(savedValues)}>
+              Load saved data
             </button>
 
             <button
