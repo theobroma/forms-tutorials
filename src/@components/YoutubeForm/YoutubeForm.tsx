@@ -39,8 +39,14 @@ const initialValues: IFormFields = {
   phNumbers: [''],
 };
 
-const onSubmit = (values: IFormFields) => {
-  console.log('submit:', values);
+// const onSubmit = (values: IFormFields) => {
+//   console.log('submit:', values);
+// };
+
+const onSubmit = (values: IFormFields, submitProps: any) => {
+  console.log('Form data', values);
+  console.log('submitProps', submitProps);
+  submitProps.setSubmitting(false);
 };
 
 const validationSchema = Yup.object({
@@ -66,6 +72,7 @@ const YoutubeForm: React.FC = () => {
       onSubmit={onSubmit}
       // validateOnChange={false}
       // validateOnBlur={false}
+      // validateOnMount
     >
       {(formik) => {
         console.log('Formik props', formik);
@@ -115,7 +122,7 @@ const YoutubeForm: React.FC = () => {
               <label htmlFor="address">Address</label>
               <FastField name="address">
                 {({ field, form, meta }: any) => {
-                  console.log('Field render');
+                  // console.log('Field render');
                   return (
                     <div>
                       <input type="text" {...field} />
@@ -207,7 +214,12 @@ const YoutubeForm: React.FC = () => {
               Visit all
             </button>
 
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              disabled={!formik.isValid || formik.isSubmitting}
+            >
+              Submit
+            </button>
           </Form>
         );
       }}
