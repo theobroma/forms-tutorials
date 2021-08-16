@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, ErrorMessage } from 'formik';
+import TextError from '../TextError';
 
 const Input = (props: any) => {
   const { label, name, formik, ...rest } = props;
@@ -7,7 +8,7 @@ const Input = (props: any) => {
     <div className="form-control">
       <label htmlFor={name}>{label}</label>
       <Field id={name} name={name} {...rest} />
-      <ErrorMessage name={name} />
+      <ErrorMessage name={name} component={TextError} />
     </div>
   );
 };
