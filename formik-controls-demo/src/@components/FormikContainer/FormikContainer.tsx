@@ -5,15 +5,17 @@ import FormikControl from '../FormikControl';
 
 interface IFormFields {
   email?: string;
+  description?: string;
 }
 
 const FormikContainer: React.FC = () => {
   const initialValues: IFormFields = {
     email: '',
+    description: '',
   };
-
   const validationSchema = Yup.object({
     email: Yup.string().required('Required'),
+    description: Yup.string().required('Required'),
   });
 
   const onSubmit = (values: IFormFields) => {
@@ -33,6 +35,12 @@ const FormikContainer: React.FC = () => {
             type="email"
             label="Email"
             name="email"
+            formik={formik}
+          />
+          <FormikControl
+            control="textarea"
+            label="Description"
+            name="description"
             formik={formik}
           />
           <button type="submit">Submit</button>
