@@ -2,8 +2,8 @@ import React from 'react';
 import { Field, ErrorMessage } from 'formik';
 import TextError from '../TextError';
 
-const Input = (props: any) => {
-  const { label, name, formik, ...rest } = props;
+const Input: React.FC = (props: any) => {
+  const { label, name, ...rest } = props;
   return (
     <div className="form-control">
       <label htmlFor={name}>{label}</label>
