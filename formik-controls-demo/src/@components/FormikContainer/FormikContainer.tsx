@@ -7,6 +7,7 @@ interface IFormFields {
   email?: string;
   description?: string;
   selectOption?: string;
+  radioOption?: string;
 }
 
 const FormikContainer: React.FC = () => {
@@ -17,16 +18,24 @@ const FormikContainer: React.FC = () => {
     { key: 'Option 3', value: 'option 3' },
   ];
 
+  const rcOptions = [
+    { key: 'Option 1', value: 'option1' },
+    { key: 'Option 2', value: 'option2' },
+    { key: 'Option 3', value: 'option 3' },
+  ];
+
   const initialValues: IFormFields = {
     email: '',
     description: '',
     selectOption: '',
+    radioOption: '',
   };
 
   const validationSchema = Yup.object({
     email: Yup.string().required('Required'),
     description: Yup.string().required('Required'),
     selectOption: Yup.string().required('Required'),
+    radioOption: Yup.string().required('Required'),
   });
 
   const onSubmit = (values: IFormFields) => {
@@ -59,6 +68,13 @@ const FormikContainer: React.FC = () => {
             label="Select a topic"
             name="selectOption"
             options={dropdownOptions}
+            formik={formik}
+          />
+          <FormikControl
+            control="radio"
+            label="Radio topic"
+            name="radioOption"
+            options={rcOptions}
             formik={formik}
           />
           <button type="submit">Submit</button>

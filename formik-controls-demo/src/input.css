@@ -4,6 +4,9 @@ label {
     margin-bottom: 5px;
 }
 
+
+/* for radio */
+
 input+label {
     font-weight: bold;
     display: inline-flex;
