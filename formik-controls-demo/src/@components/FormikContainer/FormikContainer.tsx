@@ -9,6 +9,7 @@ interface IFormFields {
   selectOption?: string;
   radioOption?: string;
   checkboxOption?: string[];
+  birthDate: null | any;
 }
 
 const FormikContainer: React.FC = () => {
@@ -37,6 +38,7 @@ const FormikContainer: React.FC = () => {
     selectOption: '',
     radioOption: '',
     checkboxOption: [],
+    birthDate: null,
   };
 
   const validationSchema = Yup.object({
@@ -45,10 +47,12 @@ const FormikContainer: React.FC = () => {
     selectOption: Yup.string().required('Required'),
     radioOption: Yup.string().required('Required'),
     checkboxOption: Yup.array().required('Required'),
+    birthDate: Yup.date().required('Required').nullable(),
   });
 
   const onSubmit = (values: IFormFields) => {
     console.log('Form data', values);
+    console.log('Saved data', JSON.parse(JSON.stringify(values)));
   };
 
   return (
@@ -91,6 +95,12 @@ const FormikContainer: React.FC = () => {
             label="Checkbox topics"
             name="checkboxOption"
             options={checkboxOptions}
+            formik={formik}
+          />
+          <FormikControl
+            control="date"
+            label="Pick a date"
+            name="birthDate"
             formik={formik}
           />
           <button type="submit">Submit</button>
