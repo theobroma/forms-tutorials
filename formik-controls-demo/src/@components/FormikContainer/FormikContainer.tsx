@@ -51,6 +51,7 @@ const FormikContainer: React.FC = () => {
   });
 
   const onSubmit = (values: IFormFields) => {
+    // different format of "birthDate" field
     console.log('Form data', values);
     console.log('Saved data', JSON.parse(JSON.stringify(values)));
   };
