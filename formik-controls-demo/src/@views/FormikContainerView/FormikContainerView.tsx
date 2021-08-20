@@ -1,7 +1,7 @@
 import { Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import FormikControl from '../FormikControl';
+import FormikControl from '../../@components/FormikControl';
 
 interface IFormFields {
   email?: string;
@@ -12,7 +12,7 @@ interface IFormFields {
   birthDate: null | Date;
 }
 
-const FormikContainer: React.FC = () => {
+const FormikContainerView: React.FC = () => {
   const dropdownOptions = [
     { key: 'Select an option', value: '' },
     { key: 'Option 1', value: 'option1' },
@@ -111,4 +111,4 @@ const FormikContainer: React.FC = () => {
   );
 };
 
-export default FormikContainer;
+export default FormikContainerView;
