@@ -9,7 +9,7 @@ interface IFormFields {
   selectOption?: string;
   radioOption?: string;
   checkboxOption?: string[];
-  birthDate: null | any;
+  birthDate: null | Date;
 }
 
 const FormikContainer: React.FC = () => {
