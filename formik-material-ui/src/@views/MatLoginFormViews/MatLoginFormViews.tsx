@@ -1,14 +1,14 @@
 import { Box, Container, Grid } from '@material-ui/core';
 import React from 'react';
 // import PersistentDrawerLeft from '../../@components/AppBar';
-import Footer from '../../@components/Footer';
+import Footer from '../../@components/Layout/Footer';
+import PrimaryAppBar from '../../@components/Layout/PrimaryAppBar';
 
 const MatLoginFormViews: React.FC = () => {
   return (
     <div className="HolyGrail">
       <Box mb={2}>
-        appbar
-        {/* <PersistentDrawerLeft /> */}
+        <PrimaryAppBar />
       </Box>
       <div className="HolyGrail-content">
         <Container maxWidth="lg">
