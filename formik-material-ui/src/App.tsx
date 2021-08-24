@@ -3,12 +3,12 @@ import React from 'react';
 // import FormikContainerView from './@views/FormikContainerView';
 // import LoginFormView from './@views/LoginFormView';
 // import RegistrationFormView from './@views/RegistrationFormView';
-import MatLoginFormViews from './@views/MatLoginFormViews';
 import './App.css';
 import './input.css';
 
 // All styles
 import './@assets/styles/index.scss';
+import MainMatView from './@views/MainMatView';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     //   <EnrollmentFormView />
     //   <MatLoginFormViews />
     // </div>
-    <MatLoginFormViews />
+    <MainMatView />
   );
 }
 
