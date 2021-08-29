@@ -8,8 +8,7 @@ import './input.css';
 
 // All styles
 import './@assets/styles/index.scss';
-import MainMatView from './@views/MainMatView';
-import LoginForm from './@composites/LoginForm';
+import MainBootstrapView from './@views/MainBootstrapView';
 
 function App() {
   return (
@@ -21,8 +20,7 @@ function App() {
     //   <EnrollmentFormView />
     //   <MatLoginFormViews />
     // </div>
-    // <MainMatView />
-    <LoginForm />
+    <MainBootstrapView />
   );
 }
 
