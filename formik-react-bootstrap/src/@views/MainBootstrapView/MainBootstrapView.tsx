@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Alert } from 'react-bootstrap';
-// import LoginForm from '../../@composites/LoginForm';
+import LoginForm from '../../@composites/LoginForm';
 
 const MainBootstrapView: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const MainBootstrapView: React.FC = () => {
                 <p className="mb-0">Password: free</p> */}
                 <p>use form filler</p>
               </Alert>
-              {/* <LoginForm /> */}
+              <LoginForm />
             </Col>
           </Row>
         </Container>
