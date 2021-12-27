@@ -3,8 +3,8 @@ import React from 'react';
 import './@assets/styles/index.scss';
 import MainBootstrapView from './@views/MainBootstrapView';
 
-function App() {
+const App = () => {
   return <MainBootstrapView />;
-}
+};
 
 export default App;
