@@ -10,8 +10,9 @@ import './input.css';
 import './@assets/styles/index.scss';
 import MainMatView from './@views/MainMatView';
 import LoginForm from './@composites/LoginForm';
+import RegistrationForm from './@composites/RegistrationForm';
 
-function App() {
+const App = () => {
   return (
     // <div className="App">
     //   {/* uncomment one view */}
@@ -22,8 +23,9 @@ function App() {
     //   <MatLoginFormViews />
     // </div>
     // <MainMatView />
+    // <RegistrationForm />
     <LoginForm />
   );
-}
+};
 
 export default App;
