@@ -64,7 +64,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
         } = props;
         return (
           <Form noValidate onSubmit={handleSubmit}>
-            <Form.Group controlId="formEmail">
+            <Form.Group controlId="formEmail" className="mb-3">
               <Form.Label>Email адрес</Form.Label>
               <InputGroup>
                 <InputGroup.Text>
@@ -93,7 +93,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
               ) : null}
             </Form.Group>
             {/* =================================--Password--================================= */}
-            <Form.Group controlId="formPassword">
+            <Form.Group controlId="formPassword" className="mb-3">
               <Form.Label>Пароль</Form.Label>
               <InputGroup>
                 <InputGroup.Text>
@@ -123,7 +123,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
                 <Form.Text className="text-danger">{errors.password}</Form.Text>
               ) : null}
             </Form.Group>
-            <Form.Group controlId="formCheckbox">
+            <Form.Group controlId="formCheckbox" className="mb-3">
               <Form.Check
                 type="checkbox"
                 label="Запомнить меня"
@@ -133,7 +133,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
               />
             </Form.Group>
             {captchaUrl ? (
-              <Form.Group controlId="formCaptcha">
+              <Form.Group controlId="formCaptcha" className="mb-3">
                 <Form.Label>Проверочка на робота</Form.Label>
                 <div className="d-flex justify-content-center mb-3">
                   <Image src={captchaUrl} fluid />
@@ -154,7 +154,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
                 ) : null}
               </Form.Group>
             ) : null}
-            <Form.Group>
+            <Form.Group className="mb-3">
               <div className="d-flex justify-content-center">
                 <Button
                   className="w-100"
@@ -179,7 +179,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
                 </Button>
               </div>
             </Form.Group>
-            <Form.Group>
+            <Form.Group className="mb-3">
               <div className="text-center">
                 <a href="https://social-network.samuraijs.com/signUp">
                   Регистрация
