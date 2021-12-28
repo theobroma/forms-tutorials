@@ -67,11 +67,9 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
             <Form.Group controlId="formEmail">
               <Form.Label>Email адрес</Form.Label>
               <InputGroup>
-                <InputGroup.Prepend>
-                  <InputGroup.Text>
-                    <FaRegEnvelope />
-                  </InputGroup.Text>
-                </InputGroup.Prepend>
+                <InputGroup.Text>
+                  <FaRegEnvelope />
+                </InputGroup.Text>
                 <Form.Control
                   type="email"
                   name="email"
@@ -98,11 +96,9 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
             <Form.Group controlId="formPassword">
               <Form.Label>Пароль</Form.Label>
               <InputGroup>
-                <InputGroup.Prepend>
-                  <InputGroup.Text>
-                    <FaLock />
-                  </InputGroup.Text>
-                </InputGroup.Prepend>
+                <InputGroup.Text>
+                  <FaLock />
+                </InputGroup.Text>
                 <Form.Control
                   type={showPassword ? 'text' : 'password'}
                   name="password"
@@ -114,16 +110,14 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
                   isValid={Boolean(touched.password && !errors.password)}
                   isInvalid={Boolean(touched.password && errors.password)}
                 />
-                <InputGroup.Append>
-                  <InputGroup.Text
-                    style={{ cursor: 'pointer' }}
-                    onClick={() =>
-                      setShowPassword((prevShowPassword) => !prevShowPassword)
-                    }
-                  >
-                    {showPassword ? <FaEye /> : <FaEyeSlash />}
-                  </InputGroup.Text>
-                </InputGroup.Append>
+                <InputGroup.Text
+                  style={{ cursor: 'pointer' }}
+                  onClick={() =>
+                    setShowPassword((prevShowPassword) => !prevShowPassword)
+                  }
+                >
+                  {showPassword ? <FaEye /> : <FaEyeSlash />}
+                </InputGroup.Text>
               </InputGroup>
               {touched.password && errors.password ? (
                 <Form.Text className="text-danger">{errors.password}</Form.Text>
