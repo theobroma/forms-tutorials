@@ -1,8 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Alert } from 'react-bootstrap';
 import LoginForm from '../../@composites/LoginForm';
+import SamuraiLoginForm, {
+  LoginPayload,
+} from '../../@composites/SamuraiLoginForm/SamuraiLoginForm';
 
 const MainBootstrapView: React.FC = () => {
+  const submitCallback = (payload: LoginPayload) => {
+    console.log(payload);
+  };
+
   return (
     <div className="HolyGrail">
       <h2>bootstrap</h2>
@@ -12,13 +19,14 @@ const MainBootstrapView: React.FC = () => {
             <Col xs={12} md={{ span: 6, offset: 3 }}>
               <h3>Login Page</h3>
               <Alert variant="success" className="mb-5">
-                {/* <p>Данные тестового аккаунта:</p>
-                <hr />
-                <p>Email: free@samuraijs.com</p>
-                <p className="mb-0">Password: free</p> */}
                 <p>use form filler</p>
               </Alert>
-              <LoginForm />
+              {/* UNCOMMENT ONE */}
+              <SamuraiLoginForm
+                submitCallback={submitCallback}
+                captchaUrl={null}
+              />
+              {/* <LoginForm /> */}
             </Col>
           </Row>
         </Container>
