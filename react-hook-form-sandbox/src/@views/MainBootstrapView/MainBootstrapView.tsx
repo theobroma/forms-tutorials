@@ -1,6 +1,7 @@
 import React from 'react';
 import BasicExample from '../../@components/BasicExample/BasicExample';
 import YupBasicExample from '../../@components/YupBasicExample/YupBasicExample';
+import ZodBasicExample from '../../@components/ZodBasicExample/ZodBasicExample';
 
 const MainBootstrapView: React.FC = () => {
   return (
@@ -8,7 +9,8 @@ const MainBootstrapView: React.FC = () => {
       <h2>bootstrap</h2>
       <div className="HolyGrail-content">
         {/* <BasicExample /> */}
-        <YupBasicExample />
+        {/* <YupBasicExample /> */}
+        <ZodBasicExample />
       </div>
       {/* <Footer /> */}
       <footer style={{ backgroundColor: '#cce5ff' }}>footer</footer>
