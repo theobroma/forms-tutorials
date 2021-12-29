@@ -1,4 +1,4 @@
-# React formik tutorials
+# React forms sandboxes
 
 ## More detailed description in project directories
 

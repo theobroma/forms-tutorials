@@ -1,4 +1,4 @@
-# React formik tutorials with React-Bootstrap.
+# React formik tutorials with Bootstrap v4.
 
 - [Bootstrap V4](https://react-bootstrap-v4.netlify.app/getting-started/introduction)
 
@@ -10,8 +10,7 @@
 
 ### Examples
 
-1. [samurai social network :src/#/@common/LoginForm/ ](https://github.com/theobroma/samurai-social-network/tree/master/client/src/%23/%40common)
-2. [https://github.com/kgnugur/formik-react-bootstrap](https://github.com/kgnugur/formik-react-bootstrap)
+1. [https://github.com/kgnugur/formik-react-bootstrap](https://github.com/kgnugur/formik-react-bootstrap)
 
 ## Quick Start
 

@@ -1,6 +1,6 @@
-# React formik tutorials with React-Bootstrap.
+# React Hook Form tutorials.
 
-- [Bootstrap V4](https://react-bootstrap-v4.netlify.app/getting-started/introduction)
+- [React Hook Form](https://react-hook-form.com/)
 
 ## Usefull links
 
@@ -10,8 +10,8 @@
 
 ### Examples
 
-1. [samurai social network :src/#/@common/LoginForm/ ](https://github.com/theobroma/samurai-social-network/tree/master/client/src/%23/%40common)
-2. [https://github.com/kgnugur/formik-react-bootstrap](https://github.com/kgnugur/formik-react-bootstrap)
+1. [Why you should be doing schema validation in React projects(zod)](https://engineering.udacity.com/why-you-should-be-doing-schema-validation-in-react-projects-ce3c4b1df02f)
+2. [React form validation with React Hook Form and Yup](https://dev.to/franciscomendes10866/react-form-validation-with-react-hook-form-and-yup-4a98)
 
 ## Quick Start
 
