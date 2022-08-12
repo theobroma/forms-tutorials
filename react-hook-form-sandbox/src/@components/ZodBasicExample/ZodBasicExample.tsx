@@ -1,7 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
   name: z.string().nonempty({ message: 'Required' }),
@@ -20,9 +21,9 @@ const ZodBasicExample = () => {
   return (
     <form onSubmit={handleSubmit((d) => console.log(d))}>
       <input {...register('name')} />
-      {errors.name?.message && <p>{errors.name?.message}</p>}
+      {!!errors.name?.message && <p>{errors.name?.message}</p>}
       <input type="number" {...register('age', { valueAsNumber: true })} />
-      {errors.age?.message && <p>{errors.age?.message}</p>}
+      {!!errors.age?.message && <p>{errors.age?.message}</p>}
       <input type="submit" />
     </form>
   );

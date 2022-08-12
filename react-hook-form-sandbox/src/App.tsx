@@ -1,7 +1,9 @@
 import React from 'react';
+
+import MainBootstrapView from './@views/MainBootstrapView';
+
 // All styles
 import './@assets/styles/index.scss';
-import MainBootstrapView from './@views/MainBootstrapView';
 
 const App = () => {
   return <MainBootstrapView />;

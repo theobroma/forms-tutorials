@@ -1,6 +1,7 @@
 import React from 'react';
-import BasicExample from '../../@components/BasicExample/BasicExample';
-import YupBasicExample from '../../@components/YupBasicExample/YupBasicExample';
+
+// import BasicExample from '../../@components/BasicExample/BasicExample';
+// import YupBasicExample from '../../@components/YupBasicExample/YupBasicExample';
 import ZodBasicExample from '../../@components/ZodBasicExample/ZodBasicExample';
 
 const MainBootstrapView: React.FC = () => {
