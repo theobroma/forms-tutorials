@@ -1,10 +1,8 @@
-import React from 'react';
-
 // import BasicExample from '../../@components/BasicExample/BasicExample';
 // import YupBasicExample from '../../@components/YupBasicExample/YupBasicExample';
 import ZodBasicExample from '../../@components/ZodBasicExample/ZodBasicExample';
 
-const MainBootstrapView: React.FC = () => {
+const MainBootstrapView = () => {
   return (
     <div className="HolyGrail">
       <h2>bootstrap</h2>

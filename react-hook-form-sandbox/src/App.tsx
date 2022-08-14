@@ -1,5 +1,3 @@
-import React from 'react';
-
 import MainBootstrapView from './@views/MainBootstrapView';
 
 // All styles
