@@ -1,5 +1,6 @@
 import React from 'react';
-import { Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field } from 'formik';
+
 import TextError from '../TextError';
 
 const Textarea: React.FC = (props: any) => {

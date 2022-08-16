@@ -1,10 +1,12 @@
 import React from 'react';
-import { Grid, Paper, Avatar, TextField, Button } from '@material-ui/core';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
+import type { FormikHelpers } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+
+import { Avatar, Button, Grid, Paper, TextField } from '@material-ui/core';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 interface IValues {
   username: string;

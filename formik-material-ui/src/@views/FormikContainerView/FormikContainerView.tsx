@@ -1,6 +1,7 @@
-import { Form, Formik } from 'formik';
 import React from 'react';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
+
 import FormikControl from '../../@components/FormikControl';
 
 interface IFormFields {

@@ -1,5 +1,7 @@
-import { Box, Container, Grid } from '@material-ui/core';
 import React from 'react';
+
+import { Box, Container, Grid } from '@material-ui/core';
+
 import Footer from '../../@components/Layout/Footer';
 import PrimaryAppBar from '../../@components/Layout/PrimaryAppBar';
 import RegistrationForm from '../../@composites/RegistrationForm';

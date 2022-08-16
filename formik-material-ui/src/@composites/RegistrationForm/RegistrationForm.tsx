@@ -1,7 +1,10 @@
 import React from 'react';
-import { Grid, Paper, Button, Typography, TextField } from '@material-ui/core';
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
+import type { FormikHelpers } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+
+import { Button, Grid, Paper, TextField, Typography } from '@material-ui/core';
+
 import 'yup-phone';
 
 interface IValues {
@@ -58,7 +61,7 @@ const RegistrationForm = () => {
                 name="name"
                 label="Name"
                 fullWidth
-                error={props.errors.name && props.touched.name}
+                error={!!props.errors.name && props.touched.name}
                 helperText={<ErrorMessage name="name" />}
                 required
               />
@@ -67,7 +70,7 @@ const RegistrationForm = () => {
                 name="email"
                 label="Email"
                 fullWidth
-                error={props.errors.email && props.touched.email}
+                error={!!props.errors.email && props.touched.email}
                 helperText={<ErrorMessage name="email" />}
                 required
               />
@@ -76,7 +79,7 @@ const RegistrationForm = () => {
                 name="phoneNumber"
                 label="Phone Number"
                 fullWidth
-                error={props.errors.phoneNumber && props.touched.phoneNumber}
+                error={!!props.errors.phoneNumber && props.touched.phoneNumber}
                 helperText={<ErrorMessage name="phoneNumber" />}
                 required
               />
@@ -86,7 +89,7 @@ const RegistrationForm = () => {
                 label="Password"
                 type="password"
                 fullWidth
-                error={props.errors.password && props.touched.password}
+                error={!!props.errors.password && props.touched.password}
                 helperText={<ErrorMessage name="password" />}
                 required
               />
