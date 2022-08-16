@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Alert } from 'react-bootstrap';
-import LoginForm from '../../@composites/LoginForm';
+// import LoginForm from '../../@composites/LoginForm';
 import SamuraiLoginForm, {
   LoginPayload,
 } from '../../@composites/SamuraiLoginForm/SamuraiLoginForm';
