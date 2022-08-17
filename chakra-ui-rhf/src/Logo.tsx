@@ -1,11 +1,13 @@
 import * as React from 'react';
+
+import type { ImageProps } from '@chakra-ui/react';
 import {
   chakra,
-  keyframes,
-  ImageProps,
   forwardRef,
+  keyframes,
   usePrefersReducedMotion,
 } from '@chakra-ui/react';
+
 import logo from './logo.svg';
 
 const spin = keyframes`
