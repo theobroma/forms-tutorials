@@ -4,21 +4,21 @@
     "license": "ISC",
     "private": true,
     "dependencies": {
-        "@testing-library/jest-dom": "^5.11.4",
-        "@testing-library/react": "^11.1.0",
-        "@testing-library/user-event": "^12.1.10",
-        "@types/jest": "^26.0.15",
-        "@types/node": "^12.0.0",
-        "@types/react": "^17.0.0",
-        "@types/react-dom": "^17.0.0",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^14.4.3",
+        "@types/jest": "^28.1.7",
+        "@types/node": "^18.7.6",
+        "@types/react": "^17.x",
+        "@types/react-dom": "^17.x",
         "formik": "^2.2.9",
-        "nanoid": "^3.1.23",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-scripts": "4.0.3",
-        "typescript": "^4.1.2",
-        "web-vitals": "^1.0.1",
-        "yup": "^0.32.9"
+        "nanoid": "^4.0.0",
+        "react": "^17.x",
+        "react-dom": "^17.x",
+        "react-scripts": "5.0.1",
+        "typescript": "^4.7.4",
+        "web-vitals": "^2.1.4",
+        "yup": "^0.32.11"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -48,8 +48,17 @@
         ]
     },
     "devDependencies": {
-        "eslint": "^7.31.0",
-        "eslint-config-airbnb-typescript-prettier": "^4.2.0",
-        "prettier": "^2.3.2"
+        "eslint": "^8.x",
+        "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "eslint-plugin-unused-imports": "^2.0.0",
+        "prettier": "^2.7.1"
+    },
+    "engines": {
+        "node": "^16.x"
+    },
+    "resolutions": {
+        "@types/react": "17.x",
+        "@types/react-dom": "17.x"
     }
 }

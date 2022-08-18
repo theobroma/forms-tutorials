@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import {
-  Formik,
-  Form,
   ErrorMessage,
+  FastField,
   Field,
   FieldArray,
-  FastField,
+  Form,
+  Formik,
 } from 'formik';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
+
 import { TextError } from './TextError';
 
 interface IFormFields {
