@@ -1,3 +1,4 @@
+// https://stackoverflow.com/a/71724414/3988363
 import { useForm } from 'react-hook-form';
 
 import {
@@ -8,21 +9,25 @@ import {
   Input,
 } from '@chakra-ui/react';
 
+interface FormValues {
+  name: string;
+}
+
 const HookForm = () => {
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<FormValues>();
 
-  function onSubmit(values) {
+  const onSubmit = (values: FormValues) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2));
         resolve('');
-      }, 3000);
+      }, 1000);
     });
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

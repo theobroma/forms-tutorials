@@ -11,8 +11,8 @@ import {
   // VStack,
 } from '@chakra-ui/react';
 
-// import HookForm from './@components/HookForm';
-import SelectExample from './@components/SelectExample';
+import HookForm from './@components/HookForm';
+// import SelectExample from './@components/SelectExample';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import { Logo } from './Logo';
 
@@ -37,8 +37,8 @@ export const App = () => (
           </Link>
         </VStack> */}
         {/* ========================== */}
-        {/* <HookForm /> */}
-        <SelectExample />
+        <HookForm />
+        {/* <SelectExample /> */}
       </Grid>
     </Box>
   </ChakraProvider>
