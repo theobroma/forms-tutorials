@@ -20,9 +20,17 @@ const ZodBasicExample = () => {
   return (
     <form onSubmit={handleSubmit((d) => console.log(d))}>
       <input {...register('name')} />
-      {!!errors.name?.message && <p>{errors.name?.message}</p>}
+      {!!errors.name?.message && (
+        <p>
+          <>{errors.name?.message}</>
+        </p>
+      )}
       <input type="number" {...register('age', { valueAsNumber: true })} />
-      {!!errors.age?.message && <p>{errors.age?.message}</p>}
+      {!!errors.age?.message && (
+        <p>
+          <>{errors.age?.message}</>
+        </p>
+      )}
       <input type="submit" />
     </form>
   );
