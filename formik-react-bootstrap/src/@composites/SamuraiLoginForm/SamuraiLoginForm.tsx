@@ -1,10 +1,12 @@
-import { Formik, FormikHelpers } from 'formik';
 import React, { useState } from 'react';
+import type { FormikHelpers } from 'formik';
+import { Formik } from 'formik';
 import { InputGroup, Spinner } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import { FaEye, FaEyeSlash, FaLock, FaRegEnvelope } from 'react-icons/fa';
+
 import { validationSchema } from './yup';
 
 interface LoginFormProps {
@@ -151,7 +153,7 @@ const SamuraiLoginForm: React.FC<LoginFormProps> = ({
                   value={values.captcha}
                   required
                   onChange={handleChange}
-                  isValid={touched.captcha && !errors.captcha}
+                  isValid={!!touched.captcha && !errors.captcha}
                 />
                 {touched.captcha && errors.captcha ? (
                   <Form.Text className="text-danger">

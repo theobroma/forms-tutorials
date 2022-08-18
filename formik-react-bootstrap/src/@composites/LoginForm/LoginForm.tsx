@@ -1,5 +1,6 @@
-import { Formik, FormikHelpers } from 'formik';
 import React from 'react';
+import type { FormikHelpers } from 'formik';
+import { Formik } from 'formik';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import * as Yup from 'yup';

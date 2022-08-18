@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Alert } from 'react-bootstrap';
-import LoginForm from '../../@composites/LoginForm';
-import SamuraiLoginForm, {
-  LoginPayload,
-} from '../../@composites/SamuraiLoginForm/SamuraiLoginForm';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
+
+import type { LoginPayload } from '../../@composites/SamuraiLoginForm/SamuraiLoginForm';
+import SamuraiLoginForm from '../../@composites/SamuraiLoginForm/SamuraiLoginForm';
 
 const MainBootstrapView: React.FC = () => {
   const submitCallback = (payload: LoginPayload) => {
