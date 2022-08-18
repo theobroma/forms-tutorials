@@ -1,7 +1,9 @@
 import React from 'react';
+import { ErrorMessage, Field } from 'formik';
 import DateView from 'react-datepicker';
-import { Field, ErrorMessage } from 'formik';
+
 import TextError from '../TextError';
+
 import 'react-datepicker/dist/react-datepicker.css';
 
 const DatePicker: React.FC = (props: any) => {
