@@ -12,25 +12,26 @@ const schema = yup
   })
   .required();
 
+type SchemaType = {
+  name: string;
+  age: number;
+};
+
 const YupBasicExample = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<SchemaType>({
     resolver: yupResolver(schema),
   });
 
   return (
     <form onSubmit={handleSubmit((d) => console.log(d))}>
       <input {...register('name')} />
-      <p>
-        <>{errors.name?.message}</>
-      </p>
+      <p>{errors.name?.message}</p>
       <input type="number" {...register('age')} />
-      <p>
-        <>{errors.age?.message}</>
-      </p>
+      <p>{errors.age?.message}</p>
       <input type="submit" />
     </form>
   );
