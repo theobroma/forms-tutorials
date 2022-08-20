@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { Button, Paper, Typography } from '@mui/material';
 
+import FormInputRadio from './form-components/FormInputRadio';
 import FormInputText from './form-components/FormInputText';
 
 interface IFormInput {
@@ -39,7 +40,7 @@ const LogRocketForm = () => {
       <Typography variant="h6"> Form Demo</Typography>
 
       <FormInputText name="textValue" control={control} label="Text Input" />
-      {/* <FormInputRadio name="radioValue" control={control} label="Radio Input" /> */}
+      <FormInputRadio name="radioValue" control={control} label="Radio Input" />
       {/* <FormInputDropdown
         name="dropdownValue"
         control={control}
