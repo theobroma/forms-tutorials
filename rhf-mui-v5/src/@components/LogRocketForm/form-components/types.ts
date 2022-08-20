@@ -4,3 +4,8 @@ export interface FormInputProps {
   label: string;
   setValue?: any;
 }
+
+export type OptionType = {
+  label: React.ReactNode;
+  value: unknown;
+};

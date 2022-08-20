@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 import { Controller } from 'react-hook-form';
 
 import {
@@ -9,9 +10,9 @@ import {
   RadioGroup,
 } from '@mui/material';
 
-import type { FormInputProps } from './FormInputProps';
+import type { FormInputProps, OptionType } from './types';
 
-const options = [
+const options: OptionType[] = [
   {
     label: 'Radio Option 1',
     value: '1',
@@ -26,6 +27,7 @@ const FormInputRadio: React.FC<FormInputProps> = ({ name, control, label }) => {
   const generateRadioOptions = () => {
     return options.map((singleOption) => (
       <FormControlLabel
+        key={nanoid()}
         value={singleOption.value}
         label={singleOption.label}
         control={<Radio />}

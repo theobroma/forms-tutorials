@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
 import { Controller } from 'react-hook-form';
 
 import {
@@ -8,9 +9,9 @@ import {
   FormLabel,
 } from '@mui/material';
 
-import type { FormInputProps } from './FormInputProps';
+import type { FormInputProps, OptionType } from './types';
 
-const options = [
+const options: OptionType[] = [
   {
     label: 'Checkbox Option 1',
     value: '1',
@@ -27,15 +28,19 @@ const FormInputMultiCheckbox: React.FC<FormInputProps> = ({
   setValue,
   label,
 }) => {
-  const [selectedItems, setSelectedItems] = useState<any>([]);
+  const [selectedItems, setSelectedItems] = useState<OptionType['value'][]>([]);
 
-  const handleSelect = (value: any) => {
+  //   useEffect(() => {
+  //     console.log(selectedItems);
+  //   }, [selectedItems]);
+
+  const handleSelect = (value: OptionType['value']) => {
     const isPresent = selectedItems.indexOf(value);
     if (isPresent !== -1) {
-      const remaining = selectedItems.filter((item: any) => item !== value);
+      const remaining = selectedItems.filter((item) => item !== value);
       setSelectedItems(remaining);
     } else {
-      setSelectedItems((prevItems: any) => [...prevItems, value]);
+      setSelectedItems((prevItems) => [...prevItems, value]);
     }
   };
 
@@ -48,7 +53,7 @@ const FormInputMultiCheckbox: React.FC<FormInputProps> = ({
       <FormLabel component="legend">{label}</FormLabel>
 
       <div>
-        {options.map((option: any) => {
+        {options.map((option) => {
           return (
             <FormControlLabel
               control={
@@ -70,7 +75,8 @@ const FormInputMultiCheckbox: React.FC<FormInputProps> = ({
                 />
               }
               label={option.label}
-              key={option.value}
+              //   key={option.value}
+              key={nanoid()}
             />
           );
         })}
