@@ -1,6 +1,6 @@
-// import BasicExample from '../../@components/BasicExample/BasicExample';
-// import YupBasicExample from '../../@components/YupBasicExample/YupBasicExample';
-// import ZodBasicExample from '../../@components/ZodBasicExample/ZodBasicExample';
+// import BasicExample from '../../@components/ResolverExamples/BasicExample/BasicExample';
+// import YupBasicExample from '../../@components/ResolverExamples/YupBasicExample/YupBasicExample';
+// import ZodBasicExample from '../../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
 import MediumSignupForm from '../../@components/MediumSignup/MediumSignup';
 
 const MainView = () => {
