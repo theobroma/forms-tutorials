@@ -1,7 +1,8 @@
 // import BasicExample from '../../@components/ResolverExamples/BasicExample/BasicExample';
 // import YupBasicExample from '../../@components/ResolverExamples/YupBasicExample/YupBasicExample';
 // import ZodBasicExample from '../../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
-import MediumSignupForm from '../../@components/MediumSignup/MediumSignup';
+// import MediumSignupForm from '../../@components/MediumSignup/MediumSignup';
+import LogRocketForm from '../../@components/LogRocketForm/LogRocketForm';
 
 const MainView = () => {
   return (
@@ -11,7 +12,8 @@ const MainView = () => {
         {/* <BasicExample /> */}
         {/* <YupBasicExample /> */}
         {/* <ZodBasicExample /> */}
-        <MediumSignupForm />
+        {/* <MediumSignupForm /> */}
+        <LogRocketForm />
       </div>
       {/* <Footer /> */}
       <footer style={{ backgroundColor: '#cce5ff' }}>footer</footer>
