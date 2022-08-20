@@ -5,6 +5,7 @@ import { Button, Paper, Typography } from '@mui/material';
 
 import FormInputMultiCheckbox from './form-components/FormInputMultiCheckbox';
 import FormInputRadio from './form-components/FormInputRadio';
+import FormInputSlider from './form-components/FormInputSlider';
 import FormInputText from './form-components/FormInputText';
 
 interface IFormInput {
@@ -54,12 +55,12 @@ const LogRocketForm = () => {
         name="checkboxValue"
         label="Checkbox Input"
       />
-      {/* <FormInputSlider
+      <FormInputSlider
         name="sliderValue"
         control={control}
         setValue={setValue}
         label="Slider Input"
-      /> */}
+      />
 
       <Button onClick={handleSubmit(onSubmit)} variant="contained">
         {' '}
