@@ -11,13 +11,15 @@ const useStyles = makeStyles()({
     justifyContent: 'center',
     alignItems: 'center',
     // padding: theme.spacing(2),
-
+    padding: '16px',
     '& .MuiTextField-root': {
       //   margin: theme.spacing(1),
+      margin: '8px',
       width: '300px',
     },
     '& .MuiButtonBase-root': {
       //   margin: theme.spacing(2),
+      margin: '16px',
     },
   },
 });
