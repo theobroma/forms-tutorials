@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { Button, Paper, Typography } from '@mui/material';
 
+import FormInputDropdown from './form-components/FormInputDropdown';
 import FormInputMultiCheckbox from './form-components/FormInputMultiCheckbox';
 import FormInputRadio from './form-components/FormInputRadio';
 import FormInputSlider from './form-components/FormInputSlider';
@@ -43,11 +44,11 @@ const LogRocketForm = () => {
 
       <FormInputText name="textValue" control={control} label="Text Input" />
       <FormInputRadio name="radioValue" control={control} label="Radio Input" />
-      {/* <FormInputDropdown
+      <FormInputDropdown
         name="dropdownValue"
         control={control}
         label="Dropdown Input"
-      /> */}
+      />
       {/* <FormInputDate name="dateValue" control={control} label="Date Input" /> */}
       <FormInputMultiCheckbox
         control={control}
