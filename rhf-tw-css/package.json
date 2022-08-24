@@ -44,11 +44,14 @@
         ]
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.8",
         "eslint": "^8.x",
         "eslint-config-airbnb-typescript-prettier": "^5.0.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
         "eslint-plugin-unused-imports": "^2.0.0",
-        "prettier": "^2.7.1"
+        "postcss": "^8.4.16",
+        "prettier": "^2.7.1",
+        "tailwindcss": "^3.1.8"
     },
     "engines": {
         "node": "^16.x"
