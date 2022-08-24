@@ -1,3 +1,4 @@
+// https://zod.dev/?id=strings
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
@@ -30,67 +31,67 @@ const JobForm = () => {
 
   return (
     <>
-      <h1 className="text-center text-4xl font-semibold mt-10">Post a job</h1>
+      <h1 className="mt-10 text-center text-4xl font-semibold">Post a job</h1>
       <form
-        className="max-w-xl m-auto py-10 my-10 px-12 border"
+        className="m-auto my-10 max-w-xl border py-10 px-12"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <label className="text-gray-600 font-medium">Job Title</label>
+        <label className="font-medium text-gray-600">Job Title</label>
         <input
-          className="border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="title"
           placeholder="Full Stack Developer, Backend Engineer, etc."
         />
         {!!errors.title && (
-          <div className="mb-3 text-normal text-red-500">
+          <div className="mb-3 font-normal text-red-500">
             {errors.title.message}
           </div>
         )}
 
-        <label className="text-gray-600 font-medium block mt-4">Location</label>
+        <label className="mt-4 block font-medium text-gray-600">Location</label>
         <input
-          className="border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="location"
           type="text"
           placeholder="Scranton, PA"
         />
         {!!errors.location && (
-          <div className="mb-3 text-normal text-red-500 ">
+          <div className="mb-3 font-normal text-red-500 ">
             {errors.location.message}
           </div>
         )}
 
-        <label className="text-gray-600 font-medium block mt-4">
+        <label className="mt-4 block font-medium text-gray-600">
           Description
         </label>
         <textarea
-          className="border-solid border-gray-300 border py-20 px-4 w-full rounded text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 py-20 px-4 text-gray-700"
           name="description"
           rows={5}
           cols={5}
         />
         {!!errors.description && (
-          <div className="mb-3 text-normal text-red-500 ">
+          <div className="mb-3 font-normal text-red-500 ">
             {errors.description.message}
           </div>
         )}
 
-        <label className="text-gray-600 font-medium block mt-4">
+        <label className="mt-4 block font-medium text-gray-600">
           Link to apply for this job
         </label>
         <input
-          className="border-solid border-gray-300 border py-2 px-4 w-full rounded text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="link"
           type="text"
           placeholder="https://www.customerengjobs.com"
         />
         {!!errors.link && (
-          <div className="mb-3 text-normal text-red-500 ">
+          <div className="mb-3 font-normal text-red-500 ">
             {errors.link.message}
           </div>
         )}
 
-        <label className="text-gray-600 font-medium block mt-4">Job type</label>
+        <label className="mt-4 block font-medium text-gray-600">Job type</label>
         <label className="inline-block">
           <input className="mt-4 mr-1" name="jobtype" type="radio" />
           Full time
@@ -102,13 +103,13 @@ const JobForm = () => {
         </label>
 
         {!!errors.jobtype && (
-          <div className="mb-3 text-normal text-red-500 ">
+          <div className="mb-3 font-normal text-red-500 ">
             {errors.jobtype.message}
           </div>
         )}
 
         <button
-          className="mt-4 w-full bg-green-400 hover:bg-green-600 text-green-100 border py-3 px-6 font-semibold text-md rounded"
+          className="mt-4 w-full rounded border bg-green-400 py-3 px-6 text-base font-semibold text-green-100 hover:bg-green-600"
           type="submit"
         >
           Submit
