@@ -5,11 +5,11 @@ import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
-  title: z.string().nonempty({ message: 'Please enter a job title' }),
-  location: z.string().nonempty({ message: 'Please enter a location' }),
-  description: z.string().nonempty({ message: 'Please enter a location' }),
-  link: z.string().nonempty({ message: 'Please enter a link' }),
-  jobtype: z.string().nonempty({ message: 'Please enter a job type' }),
+  title: z.string().min(2, { message: 'Please enter a job title' }),
+  location: z.string().min(2, { message: 'Please enter a location' }),
+  description: z.string().min(2, { message: 'Please enter a location' }),
+  link: z.string().min(2, { message: 'Please enter a link' }),
+  jobtype: z.string().min(2, { message: 'Please enter a job type' }),
 });
 
 type SchemaType = z.infer<typeof schema>;
@@ -18,6 +18,7 @@ const JobForm = () => {
   const {
     formState: { errors },
     handleSubmit,
+    register,
   } = useForm<SchemaType>({
     // defaultValues: { name: 'name', age: 11 },
     resolver: zodResolver(schema),
@@ -38,6 +39,7 @@ const JobForm = () => {
       >
         <label className="font-medium text-gray-600">Job Title</label>
         <input
+          {...register('title')}
           className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="title"
           placeholder="Full Stack Developer, Backend Engineer, etc."
@@ -50,6 +52,7 @@ const JobForm = () => {
 
         <label className="mt-4 block font-medium text-gray-600">Location</label>
         <input
+          {...register('location')}
           className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="location"
           type="text"
@@ -65,6 +68,7 @@ const JobForm = () => {
           Description
         </label>
         <textarea
+          {...register('description')}
           className="w-full rounded border border-solid border-gray-300 py-20 px-4 text-gray-700"
           name="description"
           rows={5}
@@ -80,6 +84,7 @@ const JobForm = () => {
           Link to apply for this job
         </label>
         <input
+          {...register('link')}
           className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="link"
           type="text"
@@ -93,12 +98,22 @@ const JobForm = () => {
 
         <label className="mt-4 block font-medium text-gray-600">Job type</label>
         <label className="inline-block">
-          <input className="mt-4 mr-1" name="jobtype" type="radio" />
+          <input
+            {...register('jobtype')}
+            className="mt-4 mr-1"
+            name="jobtype"
+            type="radio"
+          />
           Full time
         </label>
 
         <label className="ml-8 inline-block">
-          <input className="mt-4 mr-1" name="jobtype" type="radio" />
+          <input
+            {...register('jobtype')}
+            className="mt-4 mr-1"
+            name="jobtype"
+            type="radio"
+          />
           Part time
         </label>
 
