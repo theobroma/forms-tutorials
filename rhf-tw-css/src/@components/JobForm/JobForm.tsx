@@ -1,4 +1,5 @@
 // https://zod.dev/?id=strings
+// https://stackoverflow.com/questions/67626696/radio-buttons-with-react-hook-form
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
@@ -8,8 +9,11 @@ const schema = z.object({
   title: z.string().min(2, { message: 'Please enter a job title' }),
   location: z.string().min(2, { message: 'Please enter a location' }),
   description: z.string().min(2, { message: 'Please enter a location' }),
-  link: z.string().min(2, { message: 'Please enter a link' }),
-  jobtype: z.string().min(2, { message: 'Please enter a job type' }),
+  link: z
+    .string()
+    .url({ message: 'Invalid url' })
+    .min(2, { message: 'Please enter a link' }),
+  jobtype: z.string().min(1),
 });
 
 type SchemaType = z.infer<typeof schema>;
@@ -20,7 +24,7 @@ const JobForm = () => {
     handleSubmit,
     register,
   } = useForm<SchemaType>({
-    // defaultValues: { name: 'name', age: 11 },
+    defaultValues: { jobtype: 'fulltime' },
     resolver: zodResolver(schema),
   });
 
@@ -87,7 +91,7 @@ const JobForm = () => {
           {...register('link')}
           className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
           name="link"
-          type="text"
+          type="url"
           placeholder="https://www.customerengjobs.com"
         />
         {!!errors.link && (
@@ -103,6 +107,7 @@ const JobForm = () => {
             className="mt-4 mr-1"
             name="jobtype"
             type="radio"
+            value="fulltime"
           />
           Full time
         </label>
@@ -113,6 +118,7 @@ const JobForm = () => {
             className="mt-4 mr-1"
             name="jobtype"
             type="radio"
+            value="parttime"
           />
           Part time
         </label>
