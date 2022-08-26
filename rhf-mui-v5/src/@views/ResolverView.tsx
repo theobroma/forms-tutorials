@@ -1,8 +1,8 @@
-// import BasicExample from '../../@components/ResolverExamples/BasicExample/BasicExample';
-// import YupBasicExample from '../../@components/ResolverExamples/YupBasicExample/YupBasicExample';
 import { Grid } from '@mui/material';
 
-import ZodBasicExample from '../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
+// import BasicExample from '../@components/ResolverExamples/BasicExample/BasicExample';
+import YupBasicExample from '../@components/ResolverExamples/YupBasicExample/YupBasicExample';
+// import ZodBasicExample from '../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
 
 const ResolverView = () => {
   return (
@@ -12,8 +12,8 @@ const ResolverView = () => {
       </Grid>
       <Grid item xs={8}>
         {/* <BasicExample /> */}
-        {/* <YupBasicExample /> */}
-        <ZodBasicExample />
+        <YupBasicExample />
+        {/* <ZodBasicExample /> */}
       </Grid>
       <Grid item xs={2}>
         xs=4

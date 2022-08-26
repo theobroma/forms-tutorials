@@ -7,8 +7,12 @@ import { yupResolver } from '@hookform/resolvers/yup';
 const schema = yup
   .object()
   .shape({
-    name: yup.string().required('Обязательное поле'),
-    age: yup.number().required('Обязательное поле'),
+    name: yup.string().min(1, 'Name is required').required('Name is required'),
+    age: yup
+      .number()
+      .min(10, 'At least 10 years')
+      .max(130, 'Max value is 130')
+      .required('Age is required'),
   })
   .required();
 
