@@ -6,7 +6,9 @@
 
 import { Grid } from '@mui/material';
 
-import StrictTypingForm from '../../@components/StrictTypingForm/StrictTypingForm';
+import LoginPage from '../../@components/SocialForms/pages/login.page';
+
+// import StrictTypingForm from '../../@components/StrictTypingForm/StrictTypingForm';
 
 const MainView = () => {
   return (
@@ -23,7 +25,8 @@ const MainView = () => {
             {/* <ZodBasicExample /> */}
             {/* <MediumSignupForm /> */}
             {/* <LogRocketForm /> */}
-            <StrictTypingForm />
+            {/* <StrictTypingForm /> */}
+            <LoginPage />
           </Grid>
           <Grid item xs={2}>
             xs=4
