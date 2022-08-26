@@ -97,6 +97,11 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
             primary="Strict Typing"
             icon={<AutoGraphIcon />}
           />
+          <ListItemLink
+            to="/social"
+            primary="Social Forms"
+            icon={<AutoGraphIcon />}
+          />
         </List>
       </Drawer>
       <Main open={open}>

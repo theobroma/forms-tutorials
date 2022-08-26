@@ -4,6 +4,7 @@ import LogRocketView from '../@views/LogRocketView';
 import MainView from '../@views/MainView';
 import MediumSignupView from '../@views/MediumSignupView';
 import ResolverView from '../@views/ResolverView';
+import SocialFormsView from '../@views/SocialFormsView';
 import StrictTypingView from '../@views/StrictTypingView';
 
 import { AppLayout } from './AppLayout';
@@ -18,6 +19,7 @@ const AppContainer = () => {
           <Route path="logrocket" element={<LogRocketView />} />
           <Route path="medium" element={<MediumSignupView />} />
           <Route path="strict-typing" element={<StrictTypingView />} />
+          <Route path="social" element={<SocialFormsView />} />
           <Route path="*" element={<div>Not Found</div>} />
         </Route>
       </Routes>
