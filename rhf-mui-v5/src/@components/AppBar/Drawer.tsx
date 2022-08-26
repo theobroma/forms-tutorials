@@ -45,7 +45,7 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            rhf-mui-v5
+            RHF-MUI-V5
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           {/* Theme Menu */}
@@ -85,6 +85,11 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
           <ListItemLink
             to="/logrocket"
             primary="LogRocket"
+            icon={<AutoGraphIcon />}
+          />
+          <ListItemLink
+            to="/medium"
+            primary="MediumSignup"
             icon={<AutoGraphIcon />}
           />
         </List>

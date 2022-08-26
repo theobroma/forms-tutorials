@@ -23,7 +23,7 @@ const Footer = () => {
             // edge="start"
             color="inherit"
             target="__blank"
-            href="https://github.com/theobroma/weather-app-next"
+            href="https://github.com/theobroma/forms-tutorials/tree/main/rhf-mui-v5"
             data-testid="github-link"
             aria-label="Github Link"
           >
