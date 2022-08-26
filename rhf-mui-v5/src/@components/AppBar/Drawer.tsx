@@ -91,6 +91,11 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
             to="/medium"
             primary="MediumSignup"
             icon={<AutoGraphIcon />}
+          />{' '}
+          <ListItemLink
+            to="/strict-typing"
+            primary="Strict Typing"
+            icon={<AutoGraphIcon />}
           />
         </List>
       </Drawer>
