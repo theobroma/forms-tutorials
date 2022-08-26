@@ -1,5 +1,3 @@
-// https://www.npmjs.com/package/react-hook-form-mui
-// https://react-hook-form-material-ui.vercel.app/?path=/docs/formcontainer--strict-typing-form
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {

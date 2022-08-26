@@ -1,3 +1,7 @@
+/* *
+ * https://www.npmjs.com/package/react-hook-form-mui
+ * https://react-hook-form-material-ui.vercel.app/?path=/docs/formcontainer--strict-typing-form
+ */
 import { Grid } from '@mui/material';
 
 import StrictTypingForm from '../@components/StrictTypingForm/StrictTypingForm';

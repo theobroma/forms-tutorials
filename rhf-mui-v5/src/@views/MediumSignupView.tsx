@@ -1,3 +1,8 @@
+/* *
+ * https://levelup.gitconnected.com/using-react-hook-form-with-material-ui-components-ba42ace9507a
+ * https://github.com/chadmuro/medium-signup/tree/react-hook-form
+ */
+
 import { Grid } from '@mui/material';
 
 import MediumSignupForm from '../@components/MediumSignup/MediumSignup';

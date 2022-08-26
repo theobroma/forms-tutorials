@@ -1,3 +1,8 @@
+/* *
+ * https://blog.logrocket.com/using-material-ui-with-react-hook-form/
+ * https://github.com/Mohammad-Faisal/react-hook-form-material-ui/tree/master/src
+ */
+
 import { Grid } from '@mui/material';
 
 import LogRocketForm from '../@components/LogRocketForm/LogRocketForm';
