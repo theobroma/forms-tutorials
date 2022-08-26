@@ -1,6 +1,6 @@
-// https://stackoverflow.com/questions/69928061/struggling-with-typescript-react-eslint-and-simple-arrow-functions-components
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import LogRocketView from '../@views/LogRocketView';
 import MainView from '../@views/MainView';
 import ResolverView from '../@views/ResolverView';
 
@@ -13,7 +13,7 @@ const AppContainer = () => {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<MainView />} />
           <Route path="resolvers" element={<ResolverView />} />
-          {/* <Route path="exchanges" element={<div>exchanges</div>} /> */}
+          <Route path="logrocket" element={<LogRocketView />} />
           <Route path="*" element={<div>Not Found</div>} />
         </Route>
       </Routes>

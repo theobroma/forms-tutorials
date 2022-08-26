@@ -8,7 +8,7 @@ const ResolverView = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
-        xs=4
+        {/* xs=2 */}
       </Grid>
       <Grid item xs={8}>
         {/* <BasicExample /> */}
@@ -16,7 +16,7 @@ const ResolverView = () => {
         {/* <ZodBasicExample /> */}
       </Grid>
       <Grid item xs={2}>
-        xs=4
+        {/* xs=2 */}
       </Grid>
     </Grid>
   );

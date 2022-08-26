@@ -3,7 +3,6 @@ import * as React from 'react';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
@@ -84,9 +83,9 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
             icon={<AutoGraphIcon />}
           />
           <ListItemLink
-            to="/exchanges"
-            primary="Exchanges"
-            icon={<CurrencyExchangeIcon />}
+            to="/logrocket"
+            primary="LogRocket"
+            icon={<AutoGraphIcon />}
           />
         </List>
       </Drawer>
