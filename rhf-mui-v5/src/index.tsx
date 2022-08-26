@@ -1,11 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
+import AppContainer from './@routes/AppContainer';
 import AppThemeProvider from './@themes/theme';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
+// All styles
+import './@assets/styles/index.scss';
 // Open Source fonts
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -18,7 +20,7 @@ const root = createRoot(container);
 root.render(
   <StrictMode>
     <AppThemeProvider>
-      <App />
+      <AppContainer />
     </AppThemeProvider>
   </StrictMode>,
 );
