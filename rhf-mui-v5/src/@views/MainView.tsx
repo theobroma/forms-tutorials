@@ -6,7 +6,7 @@
 
 import { Grid } from '@mui/material';
 
-import LoginPage from '../../@components/SocialForms/pages/login.page';
+import LoginPage from '../@components/SocialForms/pages/login.page';
 
 // import StrictTypingForm from '../../@components/StrictTypingForm/StrictTypingForm';
 

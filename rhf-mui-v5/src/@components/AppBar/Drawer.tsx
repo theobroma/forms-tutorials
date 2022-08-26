@@ -46,7 +46,7 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Weather App
+            rhf-mui-v5
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           {/* Theme Menu */}
@@ -79,8 +79,8 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
         <List aria-label="primary routes">
           <ListItemLink to="/" primary="Home" icon={<HomeIcon />} />
           <ListItemLink
-            to="/cryptocurrencies"
-            primary="Cryptocurrencies"
+            to="/resolvers"
+            primary="Resolvers"
             icon={<AutoGraphIcon />}
           />
           <ListItemLink

@@ -22,6 +22,7 @@
     "@types/react-dom": "^18.x",
     "date-fns": "^2.29.2",
     "nanoid": "^4.0.0",
+    "p-min-delay": "^4.0.1",
     "react": "^18.x",
     "react-dom": "^18.x",
     "react-hook-form": "^7.34.2",
