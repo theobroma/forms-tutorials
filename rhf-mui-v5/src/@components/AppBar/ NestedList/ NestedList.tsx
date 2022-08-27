@@ -3,6 +3,7 @@ import * as React from 'react';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import HomeIcon from '@mui/icons-material/Home';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
@@ -23,13 +24,10 @@ const NestedList = () => {
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component="nav"
-      aria-labelledby="nested-list-subheader"
-      //   subheader={
-      //     <ListSubheader component="div" id="nested-list-subheader">
-      //       Nested List Items
-      //     </ListSubheader>
-      //   }
+      aria-label="primary routes"
     >
+      <ListItemLink to="/" primary="Home" icon={<HomeIcon />} />
+      {/* Resolvers */}
       <ListItemButton onClick={handleClick1}>
         <ListItemIcon>
           <InboxIcon />
@@ -59,6 +57,27 @@ const NestedList = () => {
           />
         </List>
       </Collapse>
+      {/* /Resolvers */}
+      <ListItemLink
+        to="/logrocket"
+        primary="LogRocket"
+        icon={<AutoGraphIcon />}
+      />
+      <ListItemLink
+        to="/medium"
+        primary="MediumSignup"
+        icon={<AutoGraphIcon />}
+      />
+      <ListItemLink
+        to="/strict-typing"
+        primary="Strict Typing"
+        icon={<AutoGraphIcon />}
+      />
+      <ListItemLink
+        to="/social"
+        primary="Social Forms"
+        icon={<AutoGraphIcon />}
+      />
     </List>
   );
 };

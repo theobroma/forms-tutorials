@@ -1,22 +1,18 @@
 import * as React from 'react';
 
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
 import { useTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import NestedList from './ NestedList';
 import { AppBar, DrawerHeader, drawerWidth, Main } from './Drawer.styled';
-import ListItemLink from './ListItemLink';
 // import ThemeMenu from './ThemeMenu';
 
 const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
@@ -77,34 +73,6 @@ const PersistentDrawerLeft = ({ children }: { children?: React.ReactNode }) => {
         </DrawerHeader>
         <Divider />
         <NestedList />
-        <List aria-label="primary routes">
-          <ListItemLink to="/" primary="Home" icon={<HomeIcon />} />
-          <ListItemLink
-            to="/resolvers"
-            primary="Resolvers"
-            icon={<AutoGraphIcon />}
-          />
-          <ListItemLink
-            to="/logrocket"
-            primary="LogRocket"
-            icon={<AutoGraphIcon />}
-          />
-          <ListItemLink
-            to="/medium"
-            primary="MediumSignup"
-            icon={<AutoGraphIcon />}
-          />{' '}
-          <ListItemLink
-            to="/strict-typing"
-            primary="Strict Typing"
-            icon={<AutoGraphIcon />}
-          />
-          <ListItemLink
-            to="/social"
-            primary="Social Forms"
-            icon={<AutoGraphIcon />}
-          />
-        </List>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
