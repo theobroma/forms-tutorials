@@ -2,6 +2,8 @@ import { lazy, Suspense } from 'react';
 import pMinDelay from 'p-min-delay';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import LoginPage from '../@components/SocialForms/pages/login.page';
+import SignupPage from '../@components/SocialForms/pages/Signup.page';
 // import BasicExample from '../@components/ResolverExamples/BasicExample/BasicExample';
 // import YupBasicExample from '../@components/ResolverExamples/YupBasicExample/YupBasicExample';
 // import ZodBasicExample from '../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
@@ -10,7 +12,7 @@ import LogRocketView from '../@views/LogRocketView';
 // import MainView from '../@views/MainView';
 import MediumSignupView from '../@views/MediumSignupView';
 import ResolverLayout from '../@views/ResolverView/ResolverLayout';
-import SocialFormsView from '../@views/SocialFormsView';
+import SocialFormsLayout from '../@views/SocialFormsView/SocialFormsLayout';
 import StrictTypingView from '../@views/StrictTypingView';
 
 import { AppLayout } from './AppLayout';
@@ -59,7 +61,12 @@ const AppContainer = () => {
             <Route path="logrocket" element={<LogRocketView />} />
             <Route path="medium" element={<MediumSignupView />} />
             <Route path="strict-typing" element={<StrictTypingView />} />
-            <Route path="social" element={<SocialFormsView />} />
+            {/* social forms */}
+            <Route path="social" element={<SocialFormsLayout />}>
+              <Route path="login" element={<LoginPage />} />
+              <Route path="signup" element={<SignupPage />} />
+              <Route index element={<div>Click any tab.</div>} />
+            </Route>
             <Route path="*" element={<div>Not Found</div>} />
           </Route>
         </Routes>

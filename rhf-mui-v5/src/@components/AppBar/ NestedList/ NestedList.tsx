@@ -15,9 +15,14 @@ import ListItemLink from '../ListItemLink';
 
 const NestedList = () => {
   const [open1, setOpen1] = React.useState(true);
+  const [open2, setOpen2] = React.useState(true);
 
   const handleClick1 = () => {
     setOpen1(!open1);
+  };
+
+  const handleClick2 = () => {
+    setOpen2(!open2);
   };
 
   return (
@@ -70,14 +75,34 @@ const NestedList = () => {
       />
       <ListItemLink
         to="/strict-typing"
-        primary="Strict Typing"
+        primary="Strict Typing (RHF+MUI)"
         icon={<AutoGraphIcon />}
       />
-      <ListItemLink
-        to="/social"
-        primary="Social Forms"
-        icon={<AutoGraphIcon />}
-      />
+      {/* Social Forms */}
+      <ListItemButton onClick={handleClick2}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Social Forms" />
+        {open2 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open2} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemLink
+            sx={{ pl: 4 }}
+            to="/social/login"
+            primary="Login"
+            icon={<AutoGraphIcon />}
+          />
+          <ListItemLink
+            sx={{ pl: 4 }}
+            to="/social/signup"
+            primary="Signup"
+            icon={<AutoGraphIcon />}
+          />
+        </List>
+      </Collapse>
+      {/* /Social Forms */}
     </List>
   );
 };
