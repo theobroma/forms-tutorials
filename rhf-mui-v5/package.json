@@ -43,7 +43,9 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
     "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
-    "serve": "serve -s build"
+    "serve": "serve -s build",
+    "predeploy": "yarn run build",
+    "deploy": "netlify deploy -p"
   },
   "eslintConfig": {
     "extends": [
