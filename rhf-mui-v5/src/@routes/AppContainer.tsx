@@ -8,6 +8,7 @@ import SignupPage from '../@components/SocialForms/pages/Signup.page';
 // import YupBasicExample from '../@components/ResolverExamples/YupBasicExample/YupBasicExample';
 // import ZodBasicExample from '../@components/ResolverExamples/ZodBasicExample/ZodBasicExample';
 import LoadingPage from '../@components/UI/LoadingPage';
+import IvanovLayout from '../@views/IvanovView/IvanovLayout';
 import LogRocketView from '../@views/LogRocketView';
 // import MainView from '../@views/MainView';
 import MediumSignupView from '../@views/MediumSignupView';
@@ -63,6 +64,12 @@ const AppContainer = () => {
             <Route path="strict-typing" element={<StrictTypingView />} />
             {/* social forms */}
             <Route path="social" element={<SocialFormsLayout />}>
+              <Route path="login" element={<LoginPage />} />
+              <Route path="signup" element={<SignupPage />} />
+              <Route index element={<div>Click any tab.</div>} />
+            </Route>
+            {/* ivanov tutorials */}
+            <Route path="social" element={<IvanovLayout />}>
               <Route path="login" element={<LoginPage />} />
               <Route path="signup" element={<SignupPage />} />
               <Route index element={<div>Click any tab.</div>} />
