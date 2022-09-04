@@ -1,4 +1,4 @@
-import React from 'react';
+// https://github.com/dohomi/react-hook-form-mui/blob/master/packages/rhf-mui/src/TextFieldElement.tsx
 import { Controller } from 'react-hook-form';
 
 import type { TextFieldProps } from '@mui/material';
@@ -12,25 +12,32 @@ const FormInputText = ({
   name = 'name',
   control,
   label,
+  ...rest
 }: TextFieldProps & Props) => {
+  // console.log('rest :>> ', rest);
   return (
     <Controller
       name={name}
       control={control}
       render={({
-        field: { onChange, value },
+        field: { onChange, value, onBlur },
         fieldState: { error },
         // formState,
       }) => (
         <TextField
-          helperText={error ? error.message : null}
-          size="small"
-          error={!!error}
-          onChange={onChange}
-          value={value}
-          fullWidth
+          {...rest}
+          name={name}
           label={label}
-          variant="outlined"
+          value={value ?? ''}
+          onChange={(ev) => {
+            onChange(ev);
+            if (typeof rest.onChange === 'function') {
+              rest.onChange(ev);
+            }
+          }}
+          onBlur={onBlur}
+          error={!!error}
+          helperText={error ? error.message : null}
         />
       )}
     />

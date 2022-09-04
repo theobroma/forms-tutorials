@@ -44,16 +44,28 @@ const SignIn = () => {
       </Box>
       <form className={classes.root} onSubmit={handleSubmit(onSubmit)}>
         <FormInputText
+          id="email"
+          type="email"
           name="email"
           control={control}
           label="Email Address"
+          size="small"
+          variant="outlined"
+          autoComplete="email"
           fullWidth
+          required
         />
         <FormInputText
+          id="password"
+          type="password"
           name="password"
           control={control}
           label="Password"
+          size="small"
+          variant="outlined"
+          autoComplete="current-password"
           fullWidth
+          required
         />
         <Button
           type="submit"
