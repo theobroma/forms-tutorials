@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import pMinDelay from 'p-min-delay';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import SignIn from '../@components/Ivanov/SignIn';
 import LoginPage from '../@components/SocialForms/pages/login.page';
 import SignupPage from '../@components/SocialForms/pages/Signup.page';
 // import BasicExample from '../@components/ResolverExamples/BasicExample/BasicExample';
@@ -69,9 +70,8 @@ const AppContainer = () => {
               <Route index element={<div>Click any tab.</div>} />
             </Route>
             {/* ivanov tutorials */}
-            <Route path="social" element={<IvanovLayout />}>
-              <Route path="login" element={<LoginPage />} />
-              <Route path="signup" element={<SignupPage />} />
+            <Route path="ivanov" element={<IvanovLayout />}>
+              <Route path="signin" element={<SignIn />} />
               <Route index element={<div>Click any tab.</div>} />
             </Route>
             <Route path="*" element={<div>Not Found</div>} />

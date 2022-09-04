@@ -119,14 +119,8 @@ const NestedList = () => {
         <List component="div" disablePadding>
           <ListItemLink
             sx={{ pl: 4 }}
-            to="/social/login"
-            primary="Login"
-            icon={<AutoGraphIcon />}
-          />
-          <ListItemLink
-            sx={{ pl: 4 }}
-            to="/social/signup"
-            primary="Signup"
+            to="/ivanov/signin"
+            primary="Signin"
             icon={<AutoGraphIcon />}
           />
         </List>

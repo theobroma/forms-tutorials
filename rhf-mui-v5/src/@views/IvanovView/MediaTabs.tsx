@@ -17,10 +17,10 @@ const MediaTabs = () => {
         //
       >
         <Tab
-          label="Basic"
+          label="Signin"
           component={Link}
-          to="basic"
-          value="basic"
+          to="signin"
+          value="signin"
           //
         />
         <Tab
