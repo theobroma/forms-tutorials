@@ -24,17 +24,10 @@ const MediaTabs = () => {
           //
         />
         <Tab
-          label="Yup"
+          label="Dependent"
           component={Link}
-          to="yup"
-          value="yup"
-          //
-        />
-        <Tab
-          label="Zod"
-          component={Link}
-          to="zod"
-          value="zod"
+          to="dependent"
+          value="dependent"
           //
         />
       </Tabs>
