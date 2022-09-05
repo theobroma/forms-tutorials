@@ -47,6 +47,7 @@ const SignIn = ({
 }) => {
   const { classes } = useStyles();
   const { handleSubmit, control } = useForm<SchemaType>({
+    mode: 'onBlur',
     resolver: yupResolver(schema),
   });
 
