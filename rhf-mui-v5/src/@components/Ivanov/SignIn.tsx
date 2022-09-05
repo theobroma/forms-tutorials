@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { makeStyles } from 'tss-react/mui';
+import * as yup from 'yup';
 
+import { yupResolver } from '@hookform/resolvers/yup';
 import LockIcon from '@mui/icons-material/Lock';
 import { Box, Button } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
@@ -27,13 +29,30 @@ const useStyles = makeStyles()({
   },
 });
 
-const SignIn = () => {
-  const { classes } = useStyles();
-  const { handleSubmit, control } = useForm();
+const schema = yup.object({
+  email: yup.string().email('Enter a valid email').required('Required'),
+  password: yup
+    .string()
+    .min(6, 'Password should be longer than 6 characters')
+    .required('Required'),
+});
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
+type SchemaType = {
+  email: string;
+  password: string;
+};
+
+const SignIn = ({
+  onSubmit = async (data: SchemaType) => alert(JSON.stringify(data)),
+}) => {
+  const { classes } = useStyles();
+  const { handleSubmit, control } = useForm<SchemaType>({
+    resolver: yupResolver(schema),
+  });
+
+  // const onSubmit = (data: SchemaType) => {
+  //   console.log(data);
+  // };
 
   return (
     <>
