@@ -3,7 +3,7 @@ import pMinDelay from 'p-min-delay';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import DependentFieldsRaw from '../@components/Ivanov/DependentFieldsRaw/DependentFieldsRaw';
-import SignIn from '../@components/Ivanov/SignIn';
+import SignIn from '../@components/Ivanov/SignIn/SignIn';
 import LoginPage from '../@components/SocialForms/pages/login.page';
 import SignupPage from '../@components/SocialForms/pages/Signup.page';
 // import BasicExample from '../@components/ResolverExamples/BasicExample/BasicExample';

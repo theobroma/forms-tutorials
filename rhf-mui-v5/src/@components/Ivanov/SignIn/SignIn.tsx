@@ -7,7 +7,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import { Box, Button } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 
-import FormInputText from '../LogRocketForm/form-components/FormInputText';
+import FormInputText from '../../LogRocketForm/form-components/FormInputText';
 
 const useStyles = makeStyles()({
   root: {
