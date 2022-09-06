@@ -5,8 +5,8 @@ import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
-  name: z.string().nonempty({ message: 'Required' }),
-  age: z.number().min(10),
+  name: z.string().min(1, 'Name is required'),
+  age: z.number().min(10, 'At least 10 years'),
 });
 
 type SchemaType = z.infer<typeof schema>;
