@@ -3,6 +3,7 @@ import pMinDelay from 'p-min-delay';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import DependentFieldsRaw from '../@components/Ivanov/DependentFieldsRaw/DependentFieldsRaw';
+import NormalizeMask from '../@components/Ivanov/NormalizeMask/NormalizeMask';
 import SignIn from '../@components/Ivanov/SignIn/SignIn';
 import LoginPage from '../@components/SocialForms/pages/login.page';
 import SignupPage from '../@components/SocialForms/pages/Signup.page';
@@ -74,6 +75,7 @@ const AppContainer = () => {
             <Route path="ivanov" element={<IvanovLayout />}>
               <Route path="signin" element={<SignIn />} />
               <Route path="dependent" element={<DependentFieldsRaw />} />
+              <Route path="mask" element={<NormalizeMask />} />
               <Route index element={<div>Click any tab.</div>} />
             </Route>
             <Route path="*" element={<div>Not Found</div>} />

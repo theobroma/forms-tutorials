@@ -30,6 +30,13 @@ const MediaTabs = () => {
           value="dependent"
           //
         />
+        <Tab
+          label="Mask"
+          component={Link}
+          to="mask"
+          value="mask"
+          //
+        />
       </Tabs>
     </Paper>
   );
