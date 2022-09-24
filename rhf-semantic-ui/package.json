@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
     "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
-    "serve": "serve -s build"
+    "serve": "serve -s build",
+    "postinstall": "semantic-ui-css-patch"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@semantic-ui-react/css-patch": "^1.1.2",
     "eslint": "^8.x",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
