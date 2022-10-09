@@ -52,7 +52,7 @@ const Form = () => {
           <input
             className={`w-full border px-3 py-2 text-sm leading-tight text-gray-700 ${
               errors.firstName && 'border-red-500'
-            } focus:shadow-outline appearance-none rounded focus:outline-none`}
+            } appearance-none rounded focus:outline-none`}
             id="firstName"
             type="text"
             placeholder="First Name"
@@ -74,7 +74,7 @@ const Form = () => {
           <input
             className={`w-full border px-3 py-2 text-sm leading-tight text-gray-700 ${
               errors.lastName && 'border-red-500'
-            } focus:shadow-outline appearance-none rounded focus:outline-none`}
+            } appearance-none rounded focus:outline-none`}
             id="lastName"
             type="text"
             placeholder="Last Name"
@@ -97,7 +97,7 @@ const Form = () => {
         <input
           className={`w-full border px-3 py-2 text-sm leading-tight text-gray-700 ${
             errors.email && 'border-red-500'
-          } focus:shadow-outline appearance-none rounded focus:outline-none`}
+          } appearance-none rounded focus:outline-none`}
           id="email"
           type="email"
           placeholder="Email"
@@ -120,7 +120,7 @@ const Form = () => {
           <input
             className={`w-full border px-3 py-2 text-sm leading-tight text-gray-700 ${
               errors.password && 'border-red-500'
-            } focus:shadow-outline appearance-none rounded focus:outline-none`}
+            } appearance-none rounded focus:outline-none`}
             id="password"
             type="password"
             {...register('password')}
@@ -141,7 +141,7 @@ const Form = () => {
           <input
             className={`w-full border px-3 py-2 text-sm leading-tight text-gray-700 ${
               errors.confirmPassword && 'border-red-500'
-            } focus:shadow-outline appearance-none rounded focus:outline-none`}
+            } appearance-none rounded focus:outline-none`}
             id="c_password"
             type="password"
             {...register('confirmPassword')}
@@ -171,7 +171,7 @@ const Form = () => {
       </div>
       <div className="mb-6 text-center">
         <button
-          className="focus:shadow-outline w-full rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
+          className="w-full rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
           type="submit"
         >
           Register Account
