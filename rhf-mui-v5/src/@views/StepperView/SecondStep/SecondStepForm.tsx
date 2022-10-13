@@ -31,10 +31,7 @@ const useStyles = makeStyles()({
 
 const schema = yup.object({
   email: yup.string().email('Enter a valid email').required('Required'),
-  password: yup
-    .string()
-    .min(6, 'Password should be longer than 6 characters')
-    .required('Required'),
+  nickname: yup.string().required('Required'),
 });
 
 type SchemaType = {
@@ -42,9 +39,7 @@ type SchemaType = {
   password: string;
 };
 
-const SecondStepForm = ({
-  onSubmit = async (data: SchemaType) => alert(JSON.stringify(data)),
-}) => {
+const SecondStepForm = ({ onSubmit }: { onSubmit: any }) => {
   const { classes } = useStyles();
   const { handleSubmit, control } = useForm<SchemaType>({
     mode: 'onBlur',

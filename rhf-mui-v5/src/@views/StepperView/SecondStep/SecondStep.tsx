@@ -1,3 +1,6 @@
+import { useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 import { Box, Typography } from '@mui/material';
 
 import SecondStepForm from './SecondStepForm';
@@ -7,6 +10,25 @@ type Props = {
 };
 
 const SecondStep = ({ title }: Props) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  // const [initialValues] = useState(getFormData());
+
+  const onSubmit = useCallback(
+    (values: any) => {
+      console.log('submit second step :>> ');
+      // setFormData(values);
+      // navigate({
+      //   ...location,
+      //   state: {
+      //     activeStep: 1,
+      //   },
+      // });
+      navigate(`/stepper`, { ...location, state: { activeStep: 2 } });
+    },
+    [navigate, location],
+  );
+
   return (
     <div>
       <Box mb={3} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -14,7 +36,7 @@ const SecondStep = ({ title }: Props) => {
           {title}
         </Typography>
       </Box>
-      <SecondStepForm />
+      <SecondStepForm onSubmit={onSubmit} />
     </div>
   );
 };

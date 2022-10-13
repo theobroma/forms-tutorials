@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useStyles } from 'tss-react/mui';
 
 import { Box, Typography } from '@mui/material';
 
@@ -15,10 +14,9 @@ const FirstStep = ({ title }: Props) => {
   const location = useLocation();
   // const [initialValues] = useState(getFormData());
 
-  const styles = useStyles();
-
   const onSubmit = useCallback(
     (values: any) => {
+      console.log('submit first step :>> ');
       // setFormData(values);
       // navigate({
       //   ...location,
@@ -26,11 +24,14 @@ const FirstStep = ({ title }: Props) => {
       //     activeStep: 1,
       //   },
       // });
-      navigate(`/`, { ...location, state: { activeStep: 1 } });
-      console.log('submit first step :>> ');
+      navigate(`/stepper`, { ...location, state: { activeStep: 1 } });
     },
     [navigate, location],
   );
+
+  // const onSubmit = (data: any) => {
+  //   console.log(data);
+  // };
 
   return (
     <div>
