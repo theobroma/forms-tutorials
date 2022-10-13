@@ -1,7 +1,8 @@
 import { useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { Box, Typography } from '@mui/material';
+import { KeyboardBackspace } from '@mui/icons-material';
+import { Box, IconButton, Typography } from '@mui/material';
 
 import SecondStepForm from './SecondStepForm';
 
@@ -29,6 +30,10 @@ const SecondStep = ({ title }: Props) => {
     [navigate, location],
   );
 
+  const onBack = useCallback(() => {
+    navigate(-1);
+  }, [navigate]);
+
   return (
     <div>
       <Box mb={3} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -36,6 +41,9 @@ const SecondStep = ({ title }: Props) => {
           {title}
         </Typography>
       </Box>
+      <IconButton onClick={onBack}>
+        <KeyboardBackspace fontSize="inherit" />
+      </IconButton>
       <SecondStepForm onSubmit={onSubmit} />
     </div>
   );
