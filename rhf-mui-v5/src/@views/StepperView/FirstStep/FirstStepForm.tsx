@@ -8,6 +8,7 @@ import { Box, Button } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 
 import FormInputText from '../../../@components/LogRocketForm/form-components/FormInputText';
+import getFormData from '../services/getFormData';
 
 const useStyles = makeStyles()({
   root: {
@@ -44,6 +45,7 @@ const FirstStepForm = ({ onSubmit }: { onSubmit: any }) => {
   const { handleSubmit, control } = useForm<SchemaType>({
     mode: 'onBlur',
     resolver: yupResolver(schema),
+    defaultValues: getFormData(),
   });
 
   // const onSubmit = (data: SchemaType) => {

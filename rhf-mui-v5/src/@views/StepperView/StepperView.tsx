@@ -8,6 +8,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
 
+// import clearFormData from './services/clearFormData';
 import FirstStep from './FirstStep';
 import SecondStep from './SecondStep';
 import ThirdStep from './ThirdStep';
@@ -36,6 +37,12 @@ const StepperView = () => {
 
   const tab = TABS[state?.activeStep || 0];
   //   const tab = TABS[0];
+
+  //   useEffect(() => {
+  //     return () => {
+  //       clearFormData();
+  //     };
+  //   }, []);
 
   return (
     <Container maxWidth="lg">

@@ -1,14 +1,17 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { KeyboardBackspace } from '@mui/icons-material';
 import { Box, IconButton, Typography } from '@mui/material';
+
+import getFormData from '../services/getFormData';
 
 type Props = {
   title: string;
 };
 
 const ThirdStep = ({ title }: Props) => {
+  const [initialValues] = useState(getFormData());
   const navigate = useNavigate();
   const location = useLocation();
   const onBack = useCallback(() => {
@@ -25,7 +28,15 @@ const ThirdStep = ({ title }: Props) => {
       <IconButton onClick={onBack}>
         <KeyboardBackspace fontSize="inherit" />
       </IconButton>
-      {/* <FirstStepForm /> */}
+      {/* content */}
+      {Object.entries(initialValues).map(([label, value]) => {
+        return (
+          <div>
+            <b>{label}&nbsp;:&nbsp;</b>
+            <span>{String(value || '')}</span>
+          </div>
+        );
+      })}
     </div>
   );
 };

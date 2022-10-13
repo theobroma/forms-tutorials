@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { KeyboardBackspace } from '@mui/icons-material';
 import { Box, IconButton, Typography } from '@mui/material';
 
+import setFormData from '../services/setFormData';
+
 import SecondStepForm from './SecondStepForm';
 
 type Props = {
@@ -18,7 +20,7 @@ const SecondStep = ({ title }: Props) => {
   const onSubmit = useCallback(
     (values: any) => {
       console.log('submit second step :>> ');
-      // setFormData(values);
+      setFormData(values);
       // navigate({
       //   ...location,
       //   state: {
