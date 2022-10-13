@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useStyles } from 'tss-react/mui';
 
+import FirstStepForm from './FirstStepForm';
+
 type Props = {
   title: string;
 };
@@ -28,6 +30,7 @@ const FirstStep = ({ title }: Props) => {
   return (
     <div>
       <h2>{title}</h2>
+      <FirstStepForm />
     </div>
   );
 };
