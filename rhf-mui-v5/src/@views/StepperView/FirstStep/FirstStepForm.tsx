@@ -43,7 +43,10 @@ type SchemaType = {
 };
 
 const FirstStepForm = ({
-  onSubmit = async (data: SchemaType) => alert(JSON.stringify(data)),
+  // onSubmit = async (data: SchemaType) => alert(JSON.stringify(data)),
+  onSubmit,
+}: {
+  onSubmit: any;
 }) => {
   const { classes } = useStyles();
   const { handleSubmit, control } = useForm<SchemaType>({

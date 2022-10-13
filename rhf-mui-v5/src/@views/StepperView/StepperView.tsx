@@ -30,12 +30,12 @@ const TABS = [
 const StepperView = () => {
   //   const { state = { activeStep: 0 } } = useLocation();
   const location = useLocation();
-  const { state = { activeStep: 0 } } = location;
+  const { state } = location;
 
   //   console.log('activeStep :>> ', state.activeStep);
 
-  //   const tab = TABS[state.activeStep];
-  const tab = TABS[0];
+  const tab = TABS[state?.activeStep || 0];
+  //   const tab = TABS[0];
 
   return (
     <Container maxWidth="lg">
@@ -43,8 +43,8 @@ const StepperView = () => {
         <Grid item xs={12}>
           <Stepper
             //   activeStep={1}
-            activeStep={0}
-            // activeStep={state.activeStep}
+            // activeStep={0}
+            activeStep={state?.activeStep}
             alternativeLabel
           >
             {TABS.map(({ title }) => (
