@@ -31,7 +31,7 @@ const FirstStep = ({ title }: Props) => {
 
   return (
     <div>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box mb={3} sx={{ display: 'flex', justifyContent: 'center' }}>
         <Typography variant="h5" component="h2">
           {title}
         </Typography>

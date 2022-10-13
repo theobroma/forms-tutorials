@@ -1,3 +1,7 @@
+import { Box, Typography } from '@mui/material';
+
+import FirstStepForm from '../FirstStep/FirstStepForm';
+
 type Props = {
   title: string;
 };
@@ -5,7 +9,12 @@ type Props = {
 const SecondStep = ({ title }: Props) => {
   return (
     <div>
-      <h2>{title}</h2>
+      <Box mb={3} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h5" component="h2">
+          {title}
+        </Typography>
+      </Box>
+      <FirstStepForm />
     </div>
   );
 };
