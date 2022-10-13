@@ -123,8 +123,22 @@ const NestedList = () => {
             primary="Signin"
             icon={<AutoGraphIcon />}
           />
+          <ListItemLink
+            sx={{ pl: 4 }}
+            to="/ivanov/dependent"
+            primary="Dependent"
+            icon={<AutoGraphIcon />}
+          />
+          <ListItemLink
+            sx={{ pl: 4 }}
+            to="/ivanov/mask"
+            primary="Mask"
+            icon={<AutoGraphIcon />}
+          />
         </List>
       </Collapse>
+      {/* Ivanov end */}
+      <ListItemLink to="/stepper" primary="Stepper" icon={<AutoGraphIcon />} />
     </List>
   );
 };

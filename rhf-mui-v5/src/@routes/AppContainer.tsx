@@ -20,6 +20,7 @@ import SocialFormsLayout from '../@views/SocialFormsView/SocialFormsLayout';
 import StrictTypingView from '../@views/StrictTypingView';
 
 import { AppLayout } from './AppLayout';
+import StepperView from '../@views/StepperView/StepperView';
 
 const MIN_LAZY_DELAY = 300;
 
@@ -78,6 +79,9 @@ const AppContainer = () => {
               <Route path="mask" element={<NormalizeMask />} />
               <Route index element={<div>Click any tab.</div>} />
             </Route>
+            {/* Stepper */}
+            <Route path="stepper" element={<StepperView />} />
+            {/* Global not found */}
             <Route path="*" element={<div>Not Found</div>} />
           </Route>
         </Routes>
