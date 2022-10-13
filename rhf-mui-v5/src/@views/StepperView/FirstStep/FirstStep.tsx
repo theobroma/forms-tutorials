@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Box, Typography } from '@mui/material';
 
+import setFormData from '../services/setFormData';
+
 import FirstStepForm from './FirstStepForm';
 
 type Props = {
@@ -17,7 +19,7 @@ const FirstStep = ({ title }: Props) => {
   const onSubmit = useCallback(
     (values: any) => {
       console.log('submit first step :>> ');
-      // setFormData(values);
+      setFormData(values);
       // navigate({
       //   ...location,
       //   state: {
