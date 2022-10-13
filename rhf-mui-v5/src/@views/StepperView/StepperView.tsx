@@ -2,7 +2,7 @@
 
 import { useLocation } from 'react-router-dom';
 
-import Box from '@mui/material/Box';
+import { Box, Container, Grid } from '@mui/material';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
@@ -37,21 +37,34 @@ const StepperView = () => {
   const tab = TABS[0];
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Stepper
-        //   activeStep={1}
-        activeStep={0}
-        // activeStep={state.activeStep}
-        alternativeLabel
-      >
-        {TABS.map(({ title }) => (
-          <Step key={title}>
-            <StepLabel>{title}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-      {!!tab && <tab.component title={tab.title} />}
-    </Box>
+    <Container maxWidth="lg">
+      <Grid container spacing={3} style={{ padding: 3 }}>
+        <Grid item xs={12}>
+          <Stepper
+            //   activeStep={1}
+            activeStep={0}
+            // activeStep={state.activeStep}
+            alternativeLabel
+          >
+            {TABS.map(({ title }) => (
+              <Step key={title}>
+                <StepLabel>{title}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+        </Grid>
+        {/* CONTENT */}
+        <Grid item xs={12} md={3}>
+          {/* xs=2 */}
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box py={4}>{!!tab && <tab.component title={tab.title} />}</Box>
+        </Grid>
+        <Grid item xs={12} md={3}>
+          {/* xs=2 */}
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

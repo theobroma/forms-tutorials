@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useStyles } from 'tss-react/mui';
 
+import { Box, Typography } from '@mui/material';
+
 import FirstStepForm from './FirstStepForm';
 
 type Props = {
@@ -29,7 +31,11 @@ const FirstStep = ({ title }: Props) => {
 
   return (
     <div>
-      <h2>{title}</h2>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h5" component="h2">
+          {title}
+        </Typography>
+      </Box>
       <FirstStepForm />
     </div>
   );
