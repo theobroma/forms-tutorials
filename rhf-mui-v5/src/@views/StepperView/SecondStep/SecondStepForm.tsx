@@ -95,7 +95,7 @@ const SecondStepForm = ({ onSubmit }: { onSubmit: any }) => {
           data-testid="button"
           fullWidth
         >
-          Finish
+          Next
         </Button>
       </form>
     </>

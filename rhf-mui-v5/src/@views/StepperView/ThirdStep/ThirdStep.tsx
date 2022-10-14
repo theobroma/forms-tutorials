@@ -2,8 +2,9 @@ import { useCallback, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { KeyboardBackspace } from '@mui/icons-material';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 
+import clearFormData from '../services/clearFormData';
 import getFormData from '../services/getFormData';
 
 type Props = {
@@ -17,6 +18,11 @@ const ThirdStep = ({ title }: Props) => {
   const onBack = useCallback(() => {
     navigate(-1);
   }, [navigate]);
+
+  const onSubmit = () => {
+    alert(JSON.stringify(initialValues)); // dispatch here
+    clearFormData();
+  };
 
   return (
     <div>
@@ -37,6 +43,17 @@ const ThirdStep = ({ title }: Props) => {
           </div>
         );
       })}
+      {/*  */}
+      <Button
+        onClick={() => onSubmit()}
+        type="button"
+        variant="contained"
+        color="primary"
+        data-testid="button"
+        fullWidth
+      >
+        Final
+      </Button>
     </div>
   );
 };
