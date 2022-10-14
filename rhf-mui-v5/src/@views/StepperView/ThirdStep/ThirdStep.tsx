@@ -31,7 +31,7 @@ const ThirdStep = ({ title }: Props) => {
       {/* content */}
       {Object.entries(initialValues).map(([label, value]) => {
         return (
-          <div>
+          <div key={label}>
             <b>{label}&nbsp;:&nbsp;</b>
             <span>{String(value || '')}</span>
           </div>

@@ -36,8 +36,8 @@ const schema = yup.object({
 });
 
 type SchemaType = {
-  email: string;
-  password: string;
+  firstName: string;
+  lastName: string;
 };
 
 const FirstStepForm = ({ onSubmit }: { onSubmit: any }) => {
@@ -45,7 +45,11 @@ const FirstStepForm = ({ onSubmit }: { onSubmit: any }) => {
   const { handleSubmit, control } = useForm<SchemaType>({
     mode: 'onBlur',
     resolver: yupResolver(schema),
-    defaultValues: getFormData(),
+    // defaultValues: getFormData(),
+    defaultValues: {
+      firstName: getFormData().firstName,
+      lastName: getFormData().lastName,
+    },
   });
 
   // const onSubmit = (data: SchemaType) => {
