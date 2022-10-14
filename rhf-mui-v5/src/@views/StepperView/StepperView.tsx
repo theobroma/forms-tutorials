@@ -1,6 +1,7 @@
 // https://www.youtube.com/watch?v=d3SH1H-shlg&list=PLz_dGYmQRrr-HEb1I-yfLru28HO2PrdwI&index=7&ab_channel=%D0%90%D0%B9%D0%A2%D0%B8%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA
 // https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
 // https://stackoverflow.com/questions/65948671/how-to-go-back-to-previous-route-in-react-router-dom-v6
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Box, Container, Grid } from '@mui/material';
@@ -8,7 +9,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
 
-// import clearFormData from './services/clearFormData';
+import clearFormData from './services/clearFormData';
 import FirstStep from './FirstStep';
 import SecondStep from './SecondStep';
 import ThirdStep from './ThirdStep';
@@ -38,11 +39,12 @@ const StepperView = () => {
   const tab = TABS[state?.activeStep || 0];
   //   const tab = TABS[0];
 
-  //   useEffect(() => {
-  //     return () => {
-  //       clearFormData();
-  //     };
-  //   }, []);
+  useEffect(() => {
+    return () => {
+      console.log('clearFormData');
+      clearFormData();
+    };
+  }, []);
 
   return (
     <Container maxWidth="lg">
