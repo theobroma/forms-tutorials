@@ -1,10 +1,10 @@
-import Step1 from './Step1';
+import FirstStep from './FirstStep';
 
 const UltimateView = () => {
   return (
     <div>
       UltimateView
-      <Step1 />
+      <FirstStep title="First Step" />
     </div>
   );
 };
