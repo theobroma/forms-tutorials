@@ -1,4 +1,5 @@
 // https://stackoverflow.com/questions/71233273/the-object-passed-as-the-value-prop-to-the-context-provider-changes-every-render
+// https://reacttraining.com/blog/react-context-with-typescript/
 import React, {
   createContext,
   useCallback,
@@ -7,7 +8,8 @@ import React, {
   useState,
 } from 'react';
 
-const DataContext = createContext({});
+// @ts-ignore
+const DataContext = createContext();
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const [data, setData] = useState({});

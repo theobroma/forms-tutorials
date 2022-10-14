@@ -139,6 +139,11 @@ const NestedList = () => {
       </Collapse>
       {/* Ivanov end */}
       <ListItemLink to="/stepper" primary="Stepper" icon={<AutoGraphIcon />} />
+      <ListItemLink
+        to="/ultimate"
+        primary="Ultimate"
+        icon={<AutoGraphIcon />}
+      />
     </List>
   );
 };

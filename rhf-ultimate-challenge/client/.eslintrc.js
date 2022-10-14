@@ -2,6 +2,7 @@ module.exports = {
   extends: ['airbnb-typescript-prettier'],
   plugins: ['simple-import-sort', 'unused-imports'],
   rules: {
+    '@typescript-eslint/ban-ts-comment': 1,
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,

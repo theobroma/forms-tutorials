@@ -19,6 +19,7 @@ import ResolverLayout from '../@views/ResolverView/ResolverLayout';
 import SocialFormsLayout from '../@views/SocialFormsView/SocialFormsLayout';
 import StepperView from '../@views/StepperView/StepperView';
 import StrictTypingView from '../@views/StrictTypingView';
+import UltimateView from '../@views/UltimateView/UltimateView';
 
 import { AppLayout } from './AppLayout';
 
@@ -81,6 +82,7 @@ const AppContainer = () => {
             </Route>
             {/* Stepper */}
             <Route path="stepper" element={<StepperView />} />
+            <Route path="ultimate" element={<UltimateView />} />
             {/* Global not found */}
             <Route path="*" element={<div>Not Found</div>} />
           </Route>
