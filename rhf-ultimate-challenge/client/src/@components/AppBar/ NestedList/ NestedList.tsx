@@ -73,40 +73,6 @@ const NestedList = () => {
         primary="LogRocket"
         icon={<AutoGraphIcon />}
       />
-      <ListItemLink
-        to="/medium"
-        primary="MediumSignup"
-        icon={<AutoGraphIcon />}
-      />
-      <ListItemLink
-        to="/strict-typing"
-        primary="Strict Typing (RHF+MUI)"
-        icon={<AutoGraphIcon />}
-      />
-      {/* Social Forms */}
-      <ListItemButton onClick={handleClick2}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Social Forms" />
-        {open2 ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open2} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemLink
-            sx={{ pl: 4 }}
-            to="/social/login"
-            primary="Login"
-            icon={<AutoGraphIcon />}
-          />
-          <ListItemLink
-            sx={{ pl: 4 }}
-            to="/social/signup"
-            primary="Signup"
-            icon={<AutoGraphIcon />}
-          />
-        </List>
-      </Collapse>
       {/* Ivanov Tuts */}
       <ListItemButton onClick={handleClick3}>
         <ListItemIcon>
