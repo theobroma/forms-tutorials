@@ -17,10 +17,10 @@ import LogRocketView from '../@views/LogRocketView';
 import MediumSignupView from '../@views/MediumSignupView';
 import ResolverLayout from '../@views/ResolverView/ResolverLayout';
 import SocialFormsLayout from '../@views/SocialFormsView/SocialFormsLayout';
+import StepperView from '../@views/StepperView/StepperView';
 import StrictTypingView from '../@views/StrictTypingView';
 
 import { AppLayout } from './AppLayout';
-import StepperView from '../@views/StepperView/StepperView';
 
 const MIN_LAZY_DELAY = 300;
 
