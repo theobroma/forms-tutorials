@@ -1,7 +1,9 @@
-import AppBar from './@components/AppBar/AppBar';
+// import AppBar from './@components/AppBar/AppBar';
 // import BickyView from './@views/BickyView/BickyView';
 // import MainView from './@views/MainView';
 // import SimpleView from './@views/SimpleView';
+
+import Sidebar from './@components/AppBar/Sidebar';
 
 // className="App" for testing tw linter
 const App = () => {
@@ -10,7 +12,8 @@ const App = () => {
       <h1 className="text-center text-3xl font-bold underline">
         Tailwind RHF Forms
       </h1>
-      <AppBar />
+      <Sidebar />
+      {/* <AppBar /> */}
       {/* <BickyView /> */}
       {/* <SimpleView /> */}
       {/* <MainView /> */}
