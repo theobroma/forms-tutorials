@@ -11,7 +11,7 @@ const Sidebar = () => {
       {showSidebar ? (
         <button
           type="button"
-          className="fixed right-10 top-6 z-50 flex cursor-pointer items-center text-4xl text-white"
+          className="fixed right-10 top-6 z-50 flex cursor-pointer items-center text-4xl text-blue-600"
           onClick={() => setShowSidebar(!showSidebar)}
         >
           x
@@ -32,7 +32,7 @@ const Sidebar = () => {
       )}
 
       <div
-        className={`fixed top-0 right-0 z-40  h-full w-64 bg-blue-600 text-white  duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 z-40  h-full w-64 bg-white pt-24 text-white  duration-300 ease-in-out ${
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >

@@ -1,9 +1,8 @@
 // import AppBar from './@components/AppBar/AppBar';
-// import BickyView from './@views/BickyView/BickyView';
 // import MainView from './@views/MainView';
 // import SimpleView from './@views/SimpleView';
-
 import Sidebar from './@components/AppBar/Sidebar';
+import BickyView from './@views/BickyView/BickyView';
 
 // className="App" for testing tw linter
 const App = () => {
@@ -14,7 +13,7 @@ const App = () => {
       </h1>
       <Sidebar />
       {/* <AppBar /> */}
-      {/* <BickyView /> */}
+      <BickyView />
       {/* <SimpleView /> */}
       {/* <MainView /> */}
     </div>
