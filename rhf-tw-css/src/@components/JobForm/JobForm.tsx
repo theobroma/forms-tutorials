@@ -38,13 +38,13 @@ const JobForm = () => {
     <>
       <h1 className="mt-10 text-center text-4xl font-semibold">Post a job</h1>
       <form
-        className="m-auto my-10 max-w-xl border py-10 px-12"
+        className="m-auto my-10 max-w-xl border px-12 py-10"
         onSubmit={handleSubmit(onSubmit)}
       >
         <label className="font-medium text-gray-600">Job Title</label>
         <input
           {...register('title')}
-          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 px-4 py-2 text-gray-700"
           name="title"
           placeholder="Full Stack Developer, Backend Engineer, etc."
         />
@@ -57,7 +57,7 @@ const JobForm = () => {
         <label className="mt-4 block font-medium text-gray-600">Location</label>
         <input
           {...register('location')}
-          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 px-4 py-2 text-gray-700"
           name="location"
           type="text"
           placeholder="Scranton, PA"
@@ -73,7 +73,7 @@ const JobForm = () => {
         </label>
         <textarea
           {...register('description')}
-          className="w-full rounded border border-solid border-gray-300 py-20 px-4 text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 px-4 py-20 text-gray-700"
           name="description"
           rows={5}
           cols={5}
@@ -89,7 +89,7 @@ const JobForm = () => {
         </label>
         <input
           {...register('link')}
-          className="w-full rounded border border-solid border-gray-300 py-2 px-4 text-gray-700"
+          className="w-full rounded border border-solid border-gray-300 px-4 py-2 text-gray-700"
           name="link"
           type="url"
           placeholder="https://www.customerengjobs.com"
@@ -104,7 +104,7 @@ const JobForm = () => {
         <label className="inline-block">
           <input
             {...register('jobtype')}
-            className="mt-4 mr-1"
+            className="mr-1 mt-4"
             name="jobtype"
             type="radio"
             value="fulltime"
@@ -115,7 +115,7 @@ const JobForm = () => {
         <label className="ml-8 inline-block">
           <input
             {...register('jobtype')}
-            className="mt-4 mr-1"
+            className="mr-1 mt-4"
             name="jobtype"
             type="radio"
             value="parttime"
@@ -130,7 +130,7 @@ const JobForm = () => {
         )}
 
         <button
-          className="mt-4 w-full rounded border bg-green-400 py-3 px-6 text-base font-semibold text-green-100 hover:bg-green-600"
+          className="mt-4 w-full rounded border bg-green-400 px-6 py-3 text-base font-semibold text-green-100 hover:bg-green-600"
           type="submit"
         >
           Submit

@@ -40,9 +40,9 @@ const Form = () => {
   const onSubmit: SubmitHandler<ValidationSchema> = (data) => console.log(data);
 
   return (
-    <form className="mb-4 px-8 pt-6 pb-8" onSubmit={handleSubmit(onSubmit)}>
+    <form className="mb-4 px-8 pb-8 pt-6" onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-4 md:flex md:justify-between">
-        <div className="mb-4 md:mr-2 md:mb-0">
+        <div className="mb-4 md:mb-0 md:mr-2">
           <label
             className="mb-2 block text-sm font-bold text-gray-700"
             htmlFor="firstName"
@@ -110,7 +110,7 @@ const Form = () => {
         )}
       </div>
       <div className="mb-4 md:flex md:justify-between">
-        <div className="mb-4 md:mr-2 md:mb-0">
+        <div className="mb-4 md:mb-0 md:mr-2">
           <label
             className="mb-2 block text-sm font-bold text-gray-700"
             htmlFor="password"
@@ -157,7 +157,7 @@ const Form = () => {
         <input type="checkbox" id="terms" {...register('terms')} />
         <label
           htmlFor="terms"
-          className={`ml-2 mb-2 text-sm font-bold ${
+          className={`mb-2 ml-2 text-sm font-bold ${
             errors.terms ? 'text-red-500' : 'text-gray-700'
           }`}
         >

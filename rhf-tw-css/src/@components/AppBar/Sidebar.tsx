@@ -32,7 +32,7 @@ const Sidebar = () => {
       )}
 
       <div
-        className={`fixed top-0 right-0 z-40  h-full w-64 bg-white pt-24 text-white  duration-300 ease-in-out ${
+        className={`fixed right-0 top-0 z-40  h-full w-64 bg-white pt-24 text-white  duration-300 ease-in-out ${
           showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
