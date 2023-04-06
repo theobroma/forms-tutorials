@@ -2,27 +2,6 @@
   "name": "rhf-tw-css",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@hookform/resolvers": "^2.9.9",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.1.2",
-    "@types/node": "^16.x",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "flowbite": "^1.5.3",
-    "flowbite-react": "^0.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.37.0",
-    "react-icons": "^4.6.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
-    "web-vitals": "^3.0.3",
-    "yup": "^0.32.11",
-    "zod": "^3.19.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -31,12 +10,6 @@
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,yml,json,css,scss,md}",
     "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
     "serve": "serve -s build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -50,7 +23,34 @@
       "last 1 safari version"
     ]
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.9",
+    "flowbite": "^1.5.3",
+    "flowbite-react": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.37.0",
+    "react-icons": "^4.6.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.8.4",
+    "web-vitals": "^3.0.3",
+    "yup": "^0.32.11",
+    "zod": "^3.19.1"
+  },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.1.2",
+    "@types/node": "^16.x",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.x",
     "eslint": "^8.x",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
@@ -63,6 +63,6 @@
     "tailwindcss": "^3.1.8"
   },
   "engines": {
-    "node": "^16.x"
+    "node": "^18.x"
   }
 }
